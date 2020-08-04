@@ -1,0 +1,95 @@
+﻿@model IEnumerable< Maple2.AdminLTE.Bel.M_Vendor>
+@{
+    Layout = null;
+}
+
+<style>
+    th, td {
+        white-space: nowrap;
+    }
+
+    #overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 99999;
+        display: none;
+        filter: alpha(opacity=55);
+        -moz-opacity: 0.55;
+        opacity: 0.55;
+        background-color: whitesmoke;
+    }
+
+    #overlay img {
+        position: fixed;
+        margin-left: 50%;
+        top: 60.5%;
+        height: 40px;
+        width: 40px;
+    }
+</style>
+
+<script src="~/js/Areas/Master/Vendor/UploadData.js"></script>
+<div id="UploadData"
+     data-vend-upload-url="@Url.Action("UploadModelData", "Vendor", new { Area = "Master" })"
+     data-viewbag-compcode="@ViewBag.CompCode">
+</div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-upload"></i> Upload Vendor Data</h4>
+        </div>
+        <div class="box-body pad">
+            <div class="box-body pad">
+                <div id="overlay">
+                    <img src="~/img/loader.gif" />
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-5 no-padding">
+                            <label class="control-label input-sm col-sm-5">COMPANY CODE </label>
+                            <div class="col-sm-7 no-padding">
+                                <input class="form-control" id="CompanyCode" value="" placeholder="-- Please Select --" style="width: 200px;" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <form method="POST" action="#" enctype="multipart/form-data" class="col-sm-12">
+                                <!-- COMPONENT START -->
+                                <div class="form-group">
+                                    <div class="input-group input-file" name="Fichier1">
+                                        <input type="text" class="form-control input-sm" placeholder='Choose a Vendor Master file...' />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-browse btn-sm btn-choose" type="button"><span class="fa fa-file-text" aria-hidden="true"></span>&nbsp;Browse</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- COMPONENT END -->
+                                <div class="form-group">
+                                    <button type="button" id="fileButton" class="btn btn-display btn-sm pull-right" data-url="@Url.Action("UploadFiles", "Vendor", new { Area = "Master" })"><span class="fa fa-eye" aria-hidden="true"></span>&nbsp;Display</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table id="tblUpload" class="table table-striped table-bordered table-hover"></table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnUploadData" class="btn btn-save btn-sm"><span class="fa fa-upload" aria-hidden="true"></span>&nbsp;Upload</button>
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

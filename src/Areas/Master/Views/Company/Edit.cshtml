@@ -1,0 +1,235 @@
+﻿@model Maple2.AdminLTE.Bel.M_Company
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Company/Edit.js"></script>
+<div id="EditData"
+     data-comp-edit-url="@Url.Action("Edit","Company", new { Area = "Master" })"
+     data-comp-upload-url="@Url.Action("UploadCompanyLogo", "Company", new { Area = "Master" })">
+</div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp; Edit</h4>
+        </div>
+        <br />
+        <div class="box-body pad">
+
+                @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="form-group">
+                    <label asp-for="CompanyCode" class="control-label col-md-2"></label>
+                    <div class="col-md-4">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-code" />
+                        <span asp-validation-for="CompanyCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyName" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CompanyName" class="form-control input-sm" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyLogoPath" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <div style="width:100px;">
+                            <img id="imageLogo" src="~/img/compLogo/@Model.CompanyLogoPath" onerror="this.src='@Url.Content("~/img/")empty_img-logo.jpg'" alt="Company Logo" style="max-width:100%;" />
+                        </div>
+                        <input id="imgCompanyLogo" type="file" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" />
+                        @Html.HiddenFor(model => model.CompanyLogoPath)
+                        <span asp-validation-for="CompanyLogoPath" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL1" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL1" class="form-control input-sm" />
+                        <span asp-validation-for="AddressL1" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL2" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL2" class="form-control input-sm" />
+                        <span asp-validation-for="AddressL2" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL3" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL3" class="form-control input-sm" />
+                        <span asp-validation-for="AddressL3" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL4" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL4" class="form-control input-sm" />
+                        <span asp-validation-for="AddressL4" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Telephone" class="control-label col-md-2"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Telephone" class="form-control input-sm" />
+                        <span asp-validation-for="Telephone" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Fax" class="control-label col-md-2"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Fax" class="form-control input-sm" />
+                        <span asp-validation-for="Fax" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyTaxId" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CompanyTaxId" class="form-control input-sm" />
+                        <span asp-validation-for="CompanyTaxId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Is_Active" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                        <span asp-validation-for="Is_Active" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="button" id="btnSaveEdit" class="btn btn-save btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                        &nbsp;
+                        <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+@*<h2>Edit</h2>
+
+<h4>M_Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyCode" class="control-label"></label>
+                <input asp-for="CompanyCode" class="form-control" />
+                <span asp-validation-for="CompanyCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyLogoPath" class="control-label"></label>
+                <input asp-for="CompanyLogoPath" class="form-control" />
+                <span asp-validation-for="CompanyLogoPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressL1" class="control-label"></label>
+                <input asp-for="AddressL1" class="form-control" />
+                <span asp-validation-for="AddressL1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressL2" class="control-label"></label>
+                <input asp-for="AddressL2" class="form-control" />
+                <span asp-validation-for="AddressL2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressL3" class="control-label"></label>
+                <input asp-for="AddressL3" class="form-control" />
+                <span asp-validation-for="AddressL3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Telephone" class="control-label"></label>
+                <input asp-for="Telephone" class="form-control" />
+                <span asp-validation-for="Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fax" class="control-label"></label>
+                <input asp-for="Fax" class="form-control" />
+                <span asp-validation-for="Fax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyTaxId" class="control-label"></label>
+                <input asp-for="CompanyTaxId" class="form-control" />
+                <span asp-validation-for="CompanyTaxId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Is_Active" /> @Html.DisplayNameFor(model => model.Is_Active)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created_Date" class="control-label"></label>
+                <input asp-for="Created_Date" class="form-control" />
+                <span asp-validation-for="Created_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created_By" class="control-label"></label>
+                <input asp-for="Created_By" class="form-control" />
+                <span asp-validation-for="Created_By" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Updated_Date" class="control-label"></label>
+                <input asp-for="Updated_Date" class="form-control" />
+                <span asp-validation-for="Updated_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Updated_By" class="control-label"></label>
+                <input asp-for="Updated_By" class="form-control" />
+                <span asp-validation-for="Updated_By" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

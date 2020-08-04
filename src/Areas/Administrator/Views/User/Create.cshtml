@@ -1,0 +1,172 @@
+﻿@model Maple2.AdminLTE.Bel.M_User
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+<script src="~/js/Areas/Administrator/User/Create.js"></script>
+<div id="CreateData"
+     data-user-add-url="@Url.Action("Create", "User", new { Area = "Administrator" })"
+     data-dept-get-url="@Url.Action("GetDepartment", "Department", new { Area = "Master" })"
+     data-appu-get-url="@Url.Action("GetApplicationUser", "AppUser", new { Area = "Administrator" })"
+     data-user-upload-url="@Url.Action("UploadUserImage", "User", new { Area = "Administrator" })"
+     data-viewbag-compcode="@ViewBag.CompCode">
+</div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-plus"></i> Add</h4>
+        </div>
+
+        <div class="box-body pad">
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="UserCode" class="control-label col-md-3"></label>
+                    <div class="col-md-4">
+                        <input asp-for="UserCode" class="form-control input-sm text-code" />
+                        <span asp-validation-for="UserCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="UserName" class="form-control input-sm" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="EmpCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="EmpCode" class="form-control input-sm" />
+                        <span asp-validation-for="EmpCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DeptName" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="DeptId" type="hidden" />
+                        <input asp-for="DeptName" class="form-control input-sm" style="width:200px;" placeholder="-- Please Select --" />
+                        <span asp-validation-for="DeptId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Position" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="Position" class="form-control input-sm" />
+                        <span asp-validation-for="Position" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-bold" style="width:191px;" placeholder="-- Please Select --" />
+                        <span asp-validation-for="CompanyCode" class="text-danger"></span>
+                    </div>
+                </div>
+                               
+                <div class="form-group">
+                    <label asp-for="aspnetuser_Id" class="control-label input-sm col-md-3"></label>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <input asp-for="aspnetuser_Id" class="form-control input-sm" readonly="readonly" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-browse btn-sm btn-flat" data-toggle="modal" id="btnSearchId">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-delete btn-sm btn-flat" id="btnRemoveId">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span asp-validation-for="aspnetuser_Id" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-3">Picture</label>
+                    <div class="col-md-5">
+                        <div style="width:100px;">
+                            <img id="imageUser" src="#" onerror="this.src='@Url.Content("~/img/")user_image_empty.png'" alt="User Image" style="max-width:100%;" />
+                        </div>
+                        <input id="imgUser" type="file" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" />
+                        <span asp-validation-for="UserImagePath" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                        <span asp-validation-for="Is_Active" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnSaveCreate" class="btn btn-save btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="searchIdModal" tabindex="-1" role="dialog" aria-labelledby="SearchIdModal" aria-hidden="true" data-backdrop="static">
+    <div id="searchIdContainer">
+        <div class="modal-dialog" style="width:700px;">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" onclick="closePopup()">&times;</button>
+                    <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i> Select Application User </h4>
+                </div>
+
+                <div class="box-body pad">
+                    <div class="table-responsive">
+                        <table id="tblAppUser" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>LOGIN USER ID</th>
+                                    <th>USER NAME</th>
+                                    <th>USER EMAIL</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        @Html.Hidden("hdSelectAppUser")
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default btn-sm" onclick="closePopup()"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+             </div>
+        </div>
+    </div>
+</div>
+

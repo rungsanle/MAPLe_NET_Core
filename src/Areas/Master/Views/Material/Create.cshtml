@@ -1,0 +1,156 @@
+﻿@model Maple2.AdminLTE.Bel.M_Material
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Material/Create.js"></script>
+<div id="CreateData"
+     data-mat-add-url="@Url.Action("Create","Material", new { Area = "Master" })"
+     data-rawmattype-get-url="@Url.Action("GetRawMaterialType", "RawMaterialType", new { Area = "Master" })"
+     data-unit-get-url="@Url.Action("GetUnit", "Unit", new { Area = "Master" })"
+     data-wh-get-url="@Url.Action("GetWarehouse", "Warehouse", new { Area = "Master" })"
+     data-loc-get-url="@Url.Action("GetLocation", "Location", new { Area = "Master" })"
+     data-mat-upload-url="@Url.Action("UploadMaterialImage", "Material", new { Area = "Master" })"
+     data-viewbag-compcode="@ViewBag.CompCode">
+</div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-plus"></i> Add</h4>
+        </div>
+
+        <div class="box-body pad">
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+
+                    <div class="col-md-7">
+                        <div class="form-group row">
+                            <label asp-for="MaterialCode" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="MaterialCode" class="form-control input-sm text-code" />
+                                <span asp-validation-for="MaterialCode" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialName" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialName" class="form-control input-sm" />
+                                <span asp-validation-for="MaterialName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialDesc1" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialDesc1" class="form-control input-sm" />
+                                <span asp-validation-for="MaterialDesc1" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialDesc2" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialDesc2" class="form-control input-sm" />
+                                <span asp-validation-for="MaterialDesc2" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="RawMatTypeId" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="RawMatTypeId" type="hidden" />
+                                <input asp-for="RawMatType" class="form-control input-sm" style="width:191px;" placeholder="-- Please Select --" />
+                                <span asp-validation-for="RawMatType" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PackageStdQty" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="PackageStdQty" class="form-control input-sm text-align-right" type="number" min="0" />
+                                <span asp-validation-for="PackageStdQty" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <input asp-for="UnitId" type="hidden" />
+                                <input asp-for="Unit" class="form-control input-sm" style="width:120px;" placeholder="-- Select --" />
+                                <span asp-validation-for="Unit" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Warehouse" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="WarehouseId" type="hidden" />
+                                <input asp-for="Warehouse" class="form-control input-sm" style="width:191px;" placeholder="-- Please Select --" />
+                                <span asp-validation-for="WarehouseId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Location" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="LocationId" type="hidden" />
+                                <input asp-for="Location" class="form-control input-sm" style="width:191px;" placeholder="-- Please Select --" />
+                                <span asp-validation-for="LocationId" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                            <div class="col-md-5">
+                                <input asp-for="CompanyCode" class="form-control input-sm text-bold" style="width:191px;" placeholder="-- Please Select --" />
+                                <span asp-validation-for="CompanyCode" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                            <div class="col-md-5">
+                                <div class="checkbox">
+                                    <label>
+                                        <input asp-for="Is_Active" />
+                                    </label>
+                                </div>
+                                <span asp-validation-for="Is_Active" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-5">
+
+                        <div class="col-md-12">
+                            <label class="control-label.text-left input-sm col-md-12">MATERIAL IMAGE</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div style="width:220px;">
+                                    <img id="imageMaterial" src="#" onerror="this.src='@Url.Content("~/img/")material_image_empty.png'" alt="Material Image" style="max-width:100%;" />
+                                </div>
+                                <input id="imgMaterial" type="file" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" />
+                                <span asp-validation-for="MaterialImagePath" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnSaveCreate" class="btn btn-save btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

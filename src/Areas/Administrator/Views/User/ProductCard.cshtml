@@ -1,0 +1,102 @@
+﻿@model Maple2.AdminLTE.Uil.Areas.Administrator.Models.ProductCardModel
+@{
+    ViewData["Title"] = "ProductCard";
+    Layout = null;
+}
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="~/css/report/productcard_report.css" type="text/css" rel="stylesheet" />
+    <script>
+        var elem = document.getElementById('pageNumber');
+        if (parseInt(elem.innerHTML) <= 1) {
+            //hide page numbers for first 3 pages
+            elem.style.display = 'none';
+        }
+    </script>
+
+</head>
+<body>
+
+    @{
+        int i = 1;
+        int l = @ViewBag.ItemCount;
+
+        foreach (var item in Model.Items)
+        {
+
+            if ((i % 2) != 0)
+            {
+                @:</div><div class="row">
+                }
+                <div class="column">
+                    <div class="card">
+                        <div class="label-header">
+                            PRODUCT CARD LABEL
+                        </div>
+                        <div class="label-body">
+                            <div class="form-group">
+                                @if (item.QR_CODE != null)
+                                {
+                                    <img src="@item.QR_CODE" alt="" style="height:70px;width:70px" />
+                                }
+                                <div>
+                                    <h1>Serial #: @item.SERIAL_NO</h1>
+                                    <span class="pageNumber"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="label-footer">
+                            <img src="~/img/compLogo/ALL_LOGO.jpg" alt="" style="height:15px;width:35px" />
+                        </div>
+                    </div>
+                </div>
+
+                @if ((i % 2) != 1)
+                {
+                    @:<div></div>
+                }
+
+                @if (i == l)
+                {
+                    <div class="page-break"></div>
+                    <div class="page-break-end"></div>
+                }
+
+                @if ((i % 10) == 0)
+                {
+                    <div style="page-break-after:always;"></div>
+                }
+
+                i++;
+            }
+    }
+
+</body>
+</html>
+
+
+@*<div class="column">
+    <div class="card">
+        <p>
+            @i
+        </p>
+        @if (item.QR_CODE != null)
+        {
+            <img src="@item.QR_CODE" alt="" style="height:70px;width:70px" />
+        }
+        <p>Serial #: @item.SERIAL_NO</p>
+        {{$pdf.pageNumber}} / {{$pdf.pages.length}}
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+        @if (item.QR_CODE != null)
+        {
+            <img src="@item.QR_CODE" alt="" style="height:70px;width:70px" />
+        }
+        <p>Serial #: @item.SERIAL_NO</p>
+        {{$pdf.pageNumber}} / {{$pdf.pages.length}}
+    </div>
+</div>*@
+

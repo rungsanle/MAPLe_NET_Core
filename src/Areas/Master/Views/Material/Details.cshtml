@@ -1,0 +1,136 @@
+﻿@model Maple2.AdminLTE.Bel.M_Material
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Material/Details.js"></script>
+<div id="DetailsData"
+     data-rawmattype-get-url="@Url.Action("GetRawMaterialType", "RawMaterialType", new { Area = "Master" })"
+     data-unit-get-url="@Url.Action("GetUnit", "Unit", new { Area = "Master" })"
+     data-wh-get-url="@Url.Action("GetWarehouse", "Warehouse", new { Area = "Master" })"
+     data-loc-get-url="@Url.Action("GetLocation", "Location", new { Area = "Master" })">
+</div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp; View</h4>
+        </div>
+
+        <div class="box-body pad">
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Id" type="hidden" />
+
+                <div class="form-group">
+
+                    <div class="col-md-7">
+                        <div class="form-group row">
+                            <label asp-for="MaterialCode" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="MaterialCode" class="form-control input-sm text-code" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialName" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialName" class="form-control input-sm" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialDesc1" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialDesc1" class="form-control input-sm" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="MaterialDesc2" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-9">
+                                <input asp-for="MaterialDesc2" class="form-control input-sm" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="RawMatTypeId" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="RawMatTypeId" type="hidden" />
+                                <input asp-for="RawMatType" class="form-control input-sm" style="width:191px;" disabled="disabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="PackageStdQty" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="PackageStdQty" class="form-control input-sm text-align-right" type="number" readonly="readonly" />
+                            </div>
+                            <div class="col-sm-4">
+                                <input asp-for="UnitId" type="hidden" />
+                                <input asp-for="Unit" class="form-control input-sm" style="width:130px;" disabled="disabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Warehouse" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="WarehouseId" type="hidden" />
+                                <input asp-for="Warehouse" class="form-control input-sm" style="width:191px;" disabled="disabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Location" class="control-label input-sm col-md-3"></label>
+                            <div class="col-sm-5">
+                                <input asp-for="LocationId" type="hidden" />
+                                <input asp-for="Location" class="form-control input-sm" style="width:191px;" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                            <div class="col-md-5">
+                                <input asp-for="CompanyCode" class="form-control input-sm text-bold" readonly="readonly" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                            <div class="col-md-5">
+                                <div class="checkbox">
+                                    <label>
+                                        <input asp-for="Is_Active" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-5">
+
+                        <div class="col-md-12">
+                            <label class="control-label.text-left input-sm col-md-12">MATERIAL IMAGE</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div style="width:220px;">
+                                    <img id="imageMaterial" src='@Url.Content("~/img/materials/")@Model.MaterialImagePath' onerror="this.src='@Url.Content("~/img/")material_image_empty.png'" alt="Material Image" style="max-width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

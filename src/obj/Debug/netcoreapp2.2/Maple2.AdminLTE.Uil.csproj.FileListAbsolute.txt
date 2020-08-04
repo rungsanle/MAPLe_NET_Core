@@ -1,0 +1,522 @@
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.deps.json
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.json
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.dev.json
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csprojAssemblyReference.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CoreCompileInputs.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfoInputs.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfo.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.input.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.output.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorCoreGenerate.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Create.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Delete.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Details.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Edit.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Index.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Create.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Delete.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Details.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Edit.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Index.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\AccessDenied.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ConfirmEmail.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ExternalLogin.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPassword.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Lockout.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Login.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWith2fa.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Register.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPassword.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\SignedOut.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_Layout.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_ViewImports.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Calendar.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\ChartJS.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Flot.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Inline.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Morris.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Blank.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Invoice.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Pace.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page404.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page500.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Profile.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Advanced.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Editors.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\General.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Index.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Boxed.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Collapsed.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Fixed.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\TopNav.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Compose.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Inbox.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Read.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Account.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\History.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Profile.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Security.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\Config.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\RecoveryCodes.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\DataTable.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\Simple.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Buttons.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\General.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Icons.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Modals.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Sliders.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Timeline.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Widgets.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard1.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard2.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Footer.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Header.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutBoxed.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutCollapse.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutFixed.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutTop.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_MenuBar.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavBar.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SideBar.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_StatusMessage.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cache
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cs
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CopyComplete
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Active Programming\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.deps.json
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.json
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.dev.json
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.dll
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.dll
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.dll
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.dll
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csprojAssemblyReference.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CoreCompileInputs.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfoInputs.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfo.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.input.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.output.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorCoreGenerate.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Create.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Details.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Edit.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Index.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Create.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Details.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Edit.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Index.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\_ViewImports.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\AccessDenied.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ConfirmEmail.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ExternalLogin.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPassword.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Lockout.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Login.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWith2fa.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Register.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPassword.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\SignedOut.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_Layout.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_ViewImports.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Calendar.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\ChartJS.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Flot.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Inline.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Morris.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Blank.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Invoice.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Pace.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page404.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page500.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Profile.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Advanced.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Editors.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\General.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Index.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Boxed.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Collapsed.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Fixed.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\TopNav.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Compose.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Inbox.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Read.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Account.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\History.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Profile.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Security.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\Config.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\RecoveryCodes.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\DataTable.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\Simple.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Buttons.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\General.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Icons.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Modals.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Sliders.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Timeline.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Widgets.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard1.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard2.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Footer.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Header.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutBoxed.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutCollapse.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutFixed.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutTop.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_MenuBar.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavBar.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SideBar.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_StatusMessage.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cache
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cs
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CopyComplete
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.deps.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.dev.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csprojAssemblyReference.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CoreCompileInputs.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfoInputs.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.input.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.output.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorCoreGenerate.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\AccessDenied.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ConfirmEmail.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ExternalLogin.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPassword.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Lockout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Login.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWith2fa.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Register.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPassword.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\SignedOut.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_Layout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Calendar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\ChartJS.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Flot.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Inline.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Morris.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Blank.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Invoice.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Pace.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page404.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page500.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Profile.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Advanced.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Editors.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\General.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Boxed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Collapsed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Fixed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\TopNav.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Compose.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Inbox.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Read.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Account.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\History.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Profile.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Security.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\Config.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\RecoveryCodes.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\DataTable.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\Simple.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Buttons.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\General.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Icons.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Modals.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Sliders.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Timeline.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\Widgets.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard1.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard2.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Footer.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Header.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutBoxed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutCollapse.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutFixed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutTop.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_MenuBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SideBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_StatusMessage.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CopyComplete
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.deps.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.runtimeconfig.dev.json
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bel.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Bll.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\bin\Debug\netcoreapp2.2\Maple2.AdminLTE.Dal.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csprojAssemblyReference.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CoreCompileInputs.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorAssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfoInputs.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.AssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.input.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.TagHelpers.output.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorCoreGenerate.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\AppUser\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\AppUser\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\AppUser\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\AppUser\Register.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\Role\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\Role\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\Role\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\Role\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\FooterReport.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\HeaderReport.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\Invoice.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\ProductCard.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\User\ProductCard_Label.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Administrator\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ArrivalType\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ArrivalType\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ArrivalType\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ArrivalType\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Company\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Customer\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Customer\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Customer\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Customer\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Customer\UploadData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Department\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Location\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Location\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Location\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Location\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\FooterReport.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\HeaderReport.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\PrintMachine.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Machine\PrintModalData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\MaterialType\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\MaterialType\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\MaterialType\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\MaterialType\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\MaterialType\UploadData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Material\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Material\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Material\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Material\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Material\UploadData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Menu\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Process\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Process\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Process\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Process\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ProductionType\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ProductionType\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ProductionType\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\ProductionType\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Product\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Product\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Product\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Product\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Product\UploadData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\RawMaterialType\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\RawMaterialType\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\RawMaterialType\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\RawMaterialType\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Unit\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Unit\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Unit\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Unit\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Vendor\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Vendor\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Vendor\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Vendor\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Vendor\UploadData.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Warehouse\Create.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Warehouse\Details.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Warehouse\Edit.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\Warehouse\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Areas\Master\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\AccessDenied.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ConfirmEmail.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ExternalLogin.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPassword.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ForgotPasswordConfirmation.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Lockout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Login.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWith2fa.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\LoginWithRecoveryCode.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\Register.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPassword.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\SignedOut.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_Layout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Account\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Calendar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\ChartJS.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Flot.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Inline.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Charts\Morris.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Error.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Blank.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Invoice.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Pace.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page404.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Page500.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Examples\Profile.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Advanced.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\Editors.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Forms\General.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Boxed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Collapsed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\Fixed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Layout\TopNav.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Compose.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Inbox.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Mail\Read.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Account.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\History.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Profile.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\Security.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\Config.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Settings\TwoFactorAuth\RecoveryCodes.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\DataTable.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Tables\Simple.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Buttons.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\General.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Icons.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Modals.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Sliders.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\UI\Timeline.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\Widgets.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard1.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Dashboards\Dashboard2.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Footer.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Header.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutBoxed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutCollapse.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutFixed.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutTop.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_MenuBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_SideBar.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_StatusMessage.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cache
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.RazorTargetAssemblyInfo.cs
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.Views.pdb
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.csproj.CopyComplete
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.dll
+D:\Learning\Repositories\AdminLTE-Maple2-Master\trunk\src\obj\Debug\netcoreapp2.2\Maple2.AdminLTE.Uil.pdb

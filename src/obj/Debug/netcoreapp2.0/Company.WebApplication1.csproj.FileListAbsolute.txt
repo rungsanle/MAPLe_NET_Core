@@ -1,0 +1,11 @@
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\bin\Debug\netcoreapp2.0\Company.WebApplication1.deps.json
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\bin\Debug\netcoreapp2.0\Company.WebApplication1.runtimeconfig.json
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\bin\Debug\netcoreapp2.0\Company.WebApplication1.runtimeconfig.dev.json
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\bin\Debug\netcoreapp2.0\Company.WebApplication1.dll
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\bin\Debug\netcoreapp2.0\Company.WebApplication1.pdb
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.csprojAssemblyReference.cache
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.csproj.CoreCompileInputs.cache
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.AssemblyInfoInputs.cache
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.AssemblyInfo.cs
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.dll
+D:\Learning\ASP.NET CORE2.0\AdminLTE\AdminLTE-Starter-Kit-master\src\obj\Debug\netcoreapp2.0\Company.WebApplication1.pdb

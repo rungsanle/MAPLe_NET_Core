@@ -1,0 +1,117 @@
+﻿@model Maple2.AdminLTE.Bel.M_User
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Administrator/User/Details.js"></script>
+<div id="DetailsData"
+     data-dept-get-url="@Url.Action("GetDepartment", "Department", new { Area = "Master" })">
+</div>
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp; View</h4>
+        </div>
+        <br />
+        <div class="box-body pad">
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <label asp-for="UserCode" class="control-label input-sm col-md-3"></label>
+                    <div class="col-md-4">
+                        <input asp-for="UserCode" class="form-control input-sm text-code" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="UserName" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="EmpCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="EmpCode" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="DeptName" class="control-label input-sm col-md-3"></label>
+                    <div class="col-sm-5">
+                        <input asp-for="DeptId" type="hidden" />
+                        <input asp-for="DeptName" class="form-control input-sm" style="width:200px;" disabled="disabled" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Position" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="Position" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                    <div class="col-sm-5">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-bold" style="width:200px;" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="aspnetuser_Id" class="control-label input-sm col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="aspnetuser_Id" type="hidden" />
+                        <div class="input-group">
+                            <input asp-for="aspnetuser_Id" class="form-control input-sm" readonly="readonly" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-browse btn-sm btn-flat" data-toggle="modal" id="btnSearchMatType" disabled>
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-delete btn-sm btn-flat" id="btnRemoveMatType" disabled>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span asp-validation-for="aspnetuser_Id" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-3">Picture</label>
+                    <div class="col-md-5">
+                        <div style="width:100px;">
+                            <img id="imageUser" src='@Url.Content("~/img/users/")@Model.UserImagePath' onerror="this.src='@Url.Content("~/img/")user_image_empty.png'" alt="User Image" style="max-width:100%;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

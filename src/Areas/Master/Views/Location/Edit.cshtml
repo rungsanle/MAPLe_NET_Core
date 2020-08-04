@@ -1,0 +1,93 @@
+﻿@model Maple2.AdminLTE.Bel.M_Location
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Location/Edit.js"></script>
+<div id="EditData"
+     data-loc-edit-url="@Url.Action("Edit","Location", new { Area = "Master" })"
+     data-wh-get-url="@Url.Action("GetWarehouse", "Warehouse", new { Area = "Master" })"
+     data-viewbag-compcode="@ViewBag.CompCode">
+</div>
+<div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp; Edit</h4>
+        </div>
+        <br />
+        <div class="box-body pad">
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Id" type="hidden" />
+
+                <div class="form-group">
+                    <label asp-for="LocationCode" class="control-label col-md-3"></label>
+                    <div class="col-md-4">
+                        <input asp-for="LocationCode" class="form-control input-sm text-code" />
+                        <span asp-validation-for="LocationCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LocationName" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="LocationName" class="form-control input-sm" />
+                        <span asp-validation-for="LocationName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LocationDesc" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <textarea asp-for="LocationDesc" class="form-control input-sm"></textarea>
+                        <span asp-validation-for="LocationDesc" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <input asp-for="WarehouseId" type="hidden" />
+                <div class="form-group">
+                    <label asp-for="WarehouseName" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="WarehouseName" class="form-control input-sm text-bold" style="width:200px;" placeholder="-- Please Select --" />
+                        <span asp-validation-for="WarehouseName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-bold" style="width:160px;" placeholder="-- Please Select --" />
+                        <span asp-validation-for="CompanyCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                        <span asp-validation-for="Is_Active" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnSaveEdit" class="btn btn-save btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+﻿@model Maple2.AdminLTE.Bel.M_Unit
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Unit/Create.js"></script>
+<div id="CreateData"
+     data-unit-add-url="@Url.Action("Create","Unit", new { Area = "Master" })">
+</div>
+<div class="modal-dialog modal-md">
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-plus"></i> Add</h4>
+        </div>
+
+        <div class="box-body pad">
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="UnitCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="UnitCode" class="form-control input-sm text-code" />
+                        <span asp-validation-for="UnitCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UnitName" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="UnitName" class="form-control input-sm" />
+                        <span asp-validation-for="UnitName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UnitDesc" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <textarea asp-for="UnitDesc" class="form-control input-sm"></textarea>
+                        <span asp-validation-for="UnitDesc" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                        <span asp-validation-for="Is_Active" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnSaveCreate" class="btn btn-save btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

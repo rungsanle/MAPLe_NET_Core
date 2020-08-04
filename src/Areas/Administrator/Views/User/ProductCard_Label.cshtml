@@ -1,0 +1,27 @@
+﻿@model Maple2.AdminLTE.Uil.Areas.Administrator.Models.ProductCardModel
+@{
+    ViewData["Title"] = "ProductCard";
+    Layout = null;
+}
+<html>
+<head>
+    <link href="~/css/report/productcard_report.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    @foreach (var item in Model.Items)
+    {
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    @if (item.QR_CODE != null)
+                    {
+                        <img src="@item.QR_CODE" alt="" style="height:70px;width:70px" />
+                    }
+                    <p>Serial #: @item.SERIAL_NO</p>
+                </div>
+            </div>
+        </div>
+    }
+
+</body>
+</html>

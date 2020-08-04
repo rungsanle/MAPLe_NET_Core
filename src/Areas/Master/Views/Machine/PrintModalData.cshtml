@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Maple2.AdminLTE.Bel.M_Machine>
+@{
+    ViewData["Title"] = "PrintModalData";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Machine/PrintModalData.js"></script>
+<div id="PrintModalData"
+     data-mc-get-url="@Url.Action("GetMachine", "Machine", new { Area = "Master" })"
+     data-mc-print-url="@Url.Action("PrintMachine", "Machine", new { Area = "Master" })"
+     data-viewbag-compcode="@ViewBag.CompCode"
+     data-image-url="@Url.Content("~/img")">
+</div>
+<div id="modalPrintDialog" class="modal-dialog modal-lg" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><i class="glyphicon glyphicon-print"></i>&nbsp;Select Machine For Print</h4>
+        </div>
+        <div class="box-body pad">
+            <div class="box-body">
+                <div class="table-responsive" style="height:590px;">
+                    <table id="tblSelMachine" class="table table-striped table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" name="select_all" value="1"></th>
+                                <th>@Html.DisplayNameFor(model => model.MachineCode)</th>
+                                <th>@Html.DisplayNameFor(model => model.MachineName)</th>
+                                <th>@Html.DisplayNameFor(model => model.MachineProdType)</th>
+                                <th>@Html.DisplayNameFor(model => model.MachineProdTypeName)</th>
+                                <th>@Html.DisplayNameFor(model => model.MachineSize)</th>
+                                <th>@Html.DisplayNameFor(model => model.MachineRemark)</th>
+                                <th>@Html.DisplayNameFor(model => model.CompanyCode)</th>
+                                <th>@Html.DisplayNameFor(model => model.Is_Active)</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-url="@Url.Action("ProductCard","User", new { Area = "Administrator" })" id="btnPrintSelectMc">
+                        <span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;Print
+                    </button>
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

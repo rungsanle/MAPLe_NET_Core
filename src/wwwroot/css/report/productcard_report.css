@@ -1,0 +1,67 @@
+﻿* {
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    font-family: Tahoma;
+    font-size: 6pt;
+    max-height: 99% !important;
+}
+
+.column {
+    float: left;
+    width: 364px;
+    padding: 2px;
+    height: 213px;
+}
+
+.row {
+    content: "";
+    display: table;
+    padding: 0px;
+    clear: both;
+}
+
+.card {
+    border: 1px solid #eee;
+    padding: 10px;
+    background-color: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.label-header {
+    padding: 2px;
+    height: 10%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.label-body {
+    padding: 2px;
+    height: 80%
+}
+
+.label-footer {
+    padding: 2px 0px 2px 2px;
+    height: 10%;
+    text-align: right;
+}
+
+.page-break {
+    display: table;
+    page-break-before: always;
+}
+
+.page-break-end {
+    page-break-after: always;
+}
+
+@media print {
+    html, body {
+        margin-top: 0px;
+        height: 99%;
+    }
+}

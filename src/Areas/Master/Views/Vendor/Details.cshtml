@@ -1,0 +1,147 @@
+﻿@model Maple2.AdminLTE.Bel.M_Vendor
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+<script src="~/js/Areas/Master/Vendor/Details.js"></script>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp; View</h4>
+        </div>
+
+        <div class="box-body pad">
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <label asp-for="VendorCode" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-5">
+                        <input asp-for="VendorCode" class="form-control input-sm text-code" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VendorName" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="VendorName" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL1" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL1" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL2" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL2" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL3" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL3" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AddressL4" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="AddressL4" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Telephone" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Telephone" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Fax" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-6">
+                        <input asp-for="Fax" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VendorEmail" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-6">
+                        <input asp-for="VendorEmail" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VendorContact" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="VendorContact" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CreditTerm" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CreditTerm" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PriceLevel" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="PriceLevel" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VendorTaxId" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-8">
+                        <input asp-for="VendorTaxId" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Remark" class="control-label input-sm col-md-2"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Remark" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyCode" class="control-label col-md-2"></label>
+                    <div class="col-md-5">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-bold" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Is_Active" class="control-label col-md-2"></label>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa  fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

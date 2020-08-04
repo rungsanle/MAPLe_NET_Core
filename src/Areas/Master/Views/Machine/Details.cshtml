@@ -1,0 +1,89 @@
+﻿@model Maple2.AdminLTE.Bel.M_Machine
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+
+<script src="~/js/Areas/Master/Machine/Details.js"></script>
+<div id="DetailsData"
+     data-prodtype-get-url="@Url.Action("GetProductionType", "ProductionType", new { Area = "Master" })">
+</div>
+<div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp; View</h4>
+        </div>
+
+        <div class="box-body pad">
+
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <label asp-for="MachineCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="MachineCode" class="form-control input-sm text-code" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MachineName" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="MachineName" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <input asp-for="MachineProdType" type="hidden" />
+                <div class="form-group">
+                    <label asp-for="MachineProdTypeName" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="MachineProdTypeName" class="form-control input-sm text-bold" style="width:200px;" disabled="disabled" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MachineSize" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="MachineSize" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MachineRemark" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <input asp-for="MachineRemark" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CompanyCode" class="control-label col-md-3"></label>
+                    <div class="col-md-5">
+                        <input asp-for="CompanyCode" class="form-control input-sm text-bold" readonly="readonly" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Is_Active" class="control-label col-md-3"></label>
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Is_Active" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnCancel" class="btn btn-cancel btn-sm" data-dismiss="modal"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
