@@ -1,1 +1,9 @@
-Maple2.AdminLTE.Bel\bin
+.vs/
+Maple2.AdminLTE.Bel/bin/
+Maple2.AdminLTE.Bel/obj/
+Maple2.AdminLTE.Bll/bin/
+Maple2.AdminLTE.Bll/obj/
+Maple2.AdminLTE.Dal/bin/
+Maple2.AdminLTE.Dal/obj/
+src/bin/
+src/obj/
