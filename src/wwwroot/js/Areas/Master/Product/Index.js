@@ -8,6 +8,8 @@
     
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     productVM = {
         dtProd: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('prod-get-url'),    //"/Customer/GetCustomers",
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Arrival Type Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "ProductCode", "className": "boldColumn", "autoWidth": false },
@@ -122,6 +131,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtProd.on('order', function () {
+                if (dtProd.page() !== page) {
+                    dtProd.page(page).draw('page');
+                }
+            });
+
+            dtProd.on('page', function () {
+                page = dtProd.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -130,11 +150,17 @@
 
         refresh: function () {
             dtProd.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtProd.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     productVM.init();
+
+    productVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

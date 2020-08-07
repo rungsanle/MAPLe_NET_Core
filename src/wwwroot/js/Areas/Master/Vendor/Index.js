@@ -8,6 +8,8 @@
 
     $("#success-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     vendVM = {
         dtVend: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('vend-get-url'),
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Vendor Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "VendorCode", "className": "boldColumn", "autoWidth": false },
@@ -112,6 +121,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtVend.on('order', function () {
+                if (dtVend.page() !== page) {
+                    dtVend.page(page).draw('page');
+                }
+            });
+
+            dtVend.on('page', function () {
+                page = dtVend.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -120,11 +140,17 @@
 
         refresh: function () {
             dtVend.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtVend.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     vendVM.init();
+
+    vendVM.removeSorting();
 
     //set default first page
     if (appSetting.defaultFirstPage == 1) {

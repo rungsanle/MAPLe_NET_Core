@@ -3,10 +3,11 @@
     ViewData["Title"] = "MachineLabel";
     Layout = null;
 }
+
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <link href="~/css/report/machinelabel_report.css" type="text/css" rel="stylesheet" />
+    <link href="@ViewBag.FileRefPath\\css\\report\\machinelabel_report.css" rel="stylesheet" />
 </head>
 <body>
     @{
@@ -18,66 +19,69 @@
             if ((i % 2) != 0)
             {
                 @:</div><div class="row">
-}
-<div class="column">
-    <div class="card">
-        <div class="label-header">
-            MACHINE LABEL
-        </div>
-        <div class="label-body">
-            <div class="form-group">
-                @if (item.QR_CODE != null)
-                {
-                    <img src="@item.QR_CODE" alt="" style="height:120px;width:120px" />
                 }
-                <div>
-                    <h1>@item.MachineCode</h1>
+                <div class="column">
+                    <div class="card">
+                        <div class="label-header">
+                            MACHINE LABEL
+                        </div>
+                        <div class="label-body">
+                            <div class="form-group">
+                                @if (item.QR_CODE != null)
+                                {
+                                    <img src="@item.QR_CODE" alt="" style="height:120px;width:120px" />
+                                }
+                                <div>
+                                    <h1>@item.MachineCode</h1>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <h1>Machine : @l</h1>
+                                </div>
+                                <div>
+                                    <h1>@item.MachineName</h1>
+                                </div>
+                                <div>
+                                    <p>@ViewBag.FileRefPath</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="label-footer">
+                            <img src="@ViewBag.FileRefPath\\img\\compLogo\\ALL_LOGO.jpg" alt="" style="height:30px;width:70px" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div>
-                    <h1>Machine : @l</h1>
-                </div>
-                <div>
-                    <h1>@item.MachineName</h1>
-                </div>
-            </div>
-        </div>
-        <div class="label-footer">
-            <img src="~/img/compLogo/ALL_LOGO.jpg" alt="" style="height:30px;width:70px" />
-        </div>
-    </div>
-</div>
 
-@if ((i % 2) != 1)
-{
-    @:<div></div>
-}
+                @if ((i % 2) != 1)
+                {
+                    @:<div></div>
+                }
 
-@if (i == l)
-{
-    <div class="page-break"></div>
-    <div class="page-break-end"></div>
+                @if (i == l)
+                {
+                    <div class="page-break"></div>
+                    <div class="page-break-end"></div>
 
-}
+                }
 
-@if ((i % 4) == 0)
-{
-    <div class="page-break"></div>
-}
+                @if ((i % 4) == 0)
+                {
+                    <div class="page-break"></div>
+                }
 
-i++;
-}
-}
+                i++;
+            }
+    }
 </body>
 </html>
 
 
 @*@if (l <= 4)
-{
-    <div class="page-break"></div>
-}
-else
-{
+    {
+        <div class="page-break"></div>
+    }
+    else
+    {
 
-}*@
+    }*@

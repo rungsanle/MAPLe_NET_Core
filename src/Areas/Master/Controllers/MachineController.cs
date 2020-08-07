@@ -16,6 +16,7 @@ using jsreport.Types;
 using Maple2.AdminLTE.Uil.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
 {
@@ -34,7 +35,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                                  IMemoryCache memoryCache,
                                  IConfiguration config,
                                  IJsReportMVCService jsReport,
-                                 UserManager<ApplicationUser> userManager) : base(userManager, memoryCache)
+                                 UserManager<ApplicationUser> userManager) : base(userManager, hostingEnvironment, memoryCache)
         {
             _hostingEnvironment = hostingEnvironment;
             _cache = memoryCache;
@@ -342,6 +343,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
         {
             try
             {
+                ViewBag.FileRefPath = base.JsReportFileRefPath;
 
                 List<MachineLabelModel> printMcLabel = lstSelMc.ConvertAll(mc => new MachineLabelModel(mc));
 
@@ -354,6 +356,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                 HttpContext.JsReportFeature().Recipe(jsreport.Types.Recipe.ChromePdf)
                     .Configure((r) => r.Template.Chrome = new Chrome
                     {
+                        //Url = _hostingEnvironment.WebRootPath,
                         DisplayHeaderFooter = true,
                         HeaderTemplate = header,
                         FooterTemplate = footer,

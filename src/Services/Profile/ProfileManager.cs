@@ -46,24 +46,22 @@ namespace Maple2.AdminLTE.Uil.Services.Profile
             return _userManager.IsEmailConfirmedAsync(user).Result;
         }
 
-        //public M_User CurrentAuthenUser
-        //{
-        //    get
-        //    {
-        //        if (_currentAuthenUser == null)
-        //        {
-        //            using (var userBll = new UserBLL())
-        //            {
-        //                var lstUser = await userBll.GetUser(CurrentUser.UserId);
+        public M_User CurrentAuthenUser
+        {
+            get
+            {
+                if (_currentAuthenUser == null)
+                {
+                    using (var userBll = new UserBLL())
+                    {
+                        var lstUser = userBll.GetUser(CurrentUser.UserId).Result;
+                        _currentAuthenUser = lstUser.FirstOrDefault();
+                    }
+                }
 
+                return _currentAuthenUser;
+            }
 
-        //                user = lstUser.First();
-        //            }
-        //        }
-
-        //        return null;
-        //    }
-
-        //}
+        }
     }
 }

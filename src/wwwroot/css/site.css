@@ -5,6 +5,7 @@
     }
 }
 
+
 .alert {
     position: fixed !important;
     bottom: 0px !important;
@@ -69,11 +70,12 @@ table.dataTable th {
     /* background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
     /* background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#F7F7F7',GradientType=0 ); /* IE6-9 */
-    background: #f4f4f4; /* Old browsers */
-    background: -moz-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #f4f4f4 0%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #f4f4f4 0%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f6f6f6+0,f6f6f6+3 */
+    background: #f9f9f9; /* Old browsers */
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #f9f9f9 3%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f9f9f9 0%,#f9f9f9 3%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f9f9f9 0%,#f9f9f9 3%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
 }
 
 /*table.dataTable tbody tr:nth-child(even):hover td {
@@ -94,8 +96,10 @@ table.dataTable thead > tr > th {
     font-size: 13px;
     font-family: sans-serif;
     /*border: 0.01em solid #dddddd !important;*/
-    border: 0.05em solid #dfdfdf !important;
-    border-color: #dfdfdf;
+    /*border: 0.05em solid #dfdfdf !important;
+    border-color: #dfdfdf;*/
+    border-width: 1px !important;
+    border-color: #e7e7e7 !important;
 }
 
 table.dataTable tbody tr:hover td {
@@ -121,8 +125,12 @@ word-break: break-all;*/
     white-space: nowrap;
     font-size: small;
     /*border: 0.01em solid #dddddd !important;*/
-    border: 0.05em solid #dfdfdf !important;
-    border-color: #dfdfdf;
+    /*border: 0.01em solid #dfdfdf !important;
+    border-color: #dfdfdf;*/
+    border-width: 1px !important;
+    border-color: #e7e7e7 !important;
+    padding: 5px;
+    height: 25px;
 }
 
 
@@ -172,6 +180,15 @@ td.boldColumn {
     position: absolute;
 }*/
 
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
 .modal-dialog {
     margin-top: 0;
     margin-bottom: 0;
@@ -186,6 +203,21 @@ td.boldColumn {
     border: 0.05em solid #dfdfdf !important;
     border-color: #dfdfdf;
 }
+
+/*.modal-dialog {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+}
+
+.modal-content {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    background-color: #ececec !important
+}*/
 
 .modal.fade {
     background: none;
@@ -211,8 +243,19 @@ td.boldColumn {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d2d2', endColorstr='#d2d2d2',GradientType=0 ); /* IE6-9 */
 }
 
+.modal-header-search {
+    border-radius: 8px 8px 0px 0px;
+    height: 38px !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 5px 10px 5px 5px;
+}
+
 .modal-footer {
     height: 50px !important;
+}
+
+.modal-footer-search {
+    height: 38px !important;
 }
 
 .form-control.text-code {
@@ -259,6 +302,16 @@ td.boldColumn {
     cursor: pointer;
 }
 
+.checkbox2 label, .radio label {
+    min-height: 20px;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
 /*-- For Buttons on Table --*/
 p.setfont {
     display: inline;
@@ -280,6 +333,9 @@ p.setfont {
 }
 
 /*-- For Button --*/
+.btn-sm {
+    margin-right: 3px !important;
+}
 .btn-create {
     background-color: #f4f4f4;
     color: #444;
@@ -407,6 +463,19 @@ p.setfont {
 .btn-display:focus,
 .btn-display:active,
 .btn-display.hover {
+    background-color: #e7e7e7;
+}
+
+.btn-search {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active,
+.btn-search.hover {
     background-color: #e7e7e7;
 }
 

@@ -8,6 +8,8 @@
 
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     roleVM = {
         dtRole: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('role-get-url'),
                     type: "GET",
                     async: false,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Role Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "Id", "className": "boldColumn", "autoWidth": false },
@@ -85,6 +94,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtRole.on('order', function () {
+                if (dtRole.page() !== page) {
+                    dtRole.page(page).draw('page');
+                }
+            });
+
+            dtRole.on('page', function () {
+                page = dtRole.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control input-sm');
             $('div.dataTables_length select').addClass('form-control input-sm');
 
@@ -92,11 +112,17 @@
 
         refresh: function () {
             dtRole.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtRole.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     roleVM.init();
+
+    roleVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

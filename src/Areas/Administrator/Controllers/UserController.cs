@@ -39,7 +39,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
                               IMemoryCache memoryCache,
                               IConfiguration config,
                               IJsReportMVCService jsReport,
-                              UserManager<ApplicationUser> userManager) : base(userManager, memoryCache)
+                              UserManager<ApplicationUser> userManager) : base(userManager, hostingEnvironment, memoryCache)
         {
             _hostingEnvironment = hostingEnvironment;
             _cache = memoryCache;
@@ -391,6 +391,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
             }
             catch (Exception ex)
             {
+                string excLog = ex.Message;
                 return BadRequest();
             }
         }
@@ -459,7 +460,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
         //[MiddlewareFilter(typeof(JsReportPipeline))]
         //public IActionResult Invoice()
         //{
-
+        //    ViewBag.FileRefPath = base.JsReportFileRefPath;
         //    HttpContext.JsReportFeature().Recipe(jsreport.Types.Recipe.ChromePdf)
         //        .Configure((r) => r.Template.Chrome = new Chrome
         //        {
@@ -481,7 +482,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
         {
             try
             {
-                
+                ViewBag.FileRefPath = base.JsReportFileRefPath;
                 ViewBag.ItemCount = 10;
 
                 var header = await _jsReport.RenderViewToStringAsync(HttpContext, RouteData, "HeaderReport", new { });
@@ -504,6 +505,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
             }
             catch(Exception ex)
             {
+                string excLog = ex.Message;
                 return BadRequest();
             }
         }
@@ -511,6 +513,8 @@ namespace Maple2.AdminLTE.Uil.Areas.Administrator.Controllers
         [MiddlewareFilter(typeof(JsReportPipeline))]
         public async Task<IActionResult> ProductCard_Label()
         {
+            ViewBag.FileRefPath = base.JsReportFileRefPath;
+
             HttpContext.JsReportFeature().Recipe(jsreport.Types.Recipe.ChromePdf)
                 .Configure((r) => r.Template.Chrome = new Chrome
                 {

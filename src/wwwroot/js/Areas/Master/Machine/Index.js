@@ -8,6 +8,8 @@
 
     //$("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     machineVM = {
         dtMc: null,
         init: function () {
@@ -49,46 +51,20 @@
                     btns.addClass('btn btn-default btn-sm');
                     btns.removeClass('dt-button');
                 },
-                //buttons:
-                //[
-                //    {
-                //        text: '<i class="fa fa-cogs"></i>',
-                //        titleAttr: 'Advance Search',
-                //        className: 'btn btn-default',
-                //        action: function (e, dt, node, conf) {
-                //            alert('click advance');
-                //        }
-                //    },
-                //    {
-                //        text: '<i class="fa fa-refresh">&nbsp;<p class="setfont">Refresh</p></i>',
-                //        titleAttr: 'Refresh',
-                //        className: 'btn btn-default',
-                //        action: function (e, dt, node, config) {
-                //            dt.ajax.reload(null, false);
-                //        }
-                //    },
-                //    {
-                //        extend: 'excelHtml5',
-                //        text: '<i class="fa fa-file-excel-o">&nbsp;<p class="setfont">Export XLS</p></i>',
-                //        className: 'btn btn-default',
-                //        title: 'Machine Master',
-                //        titleAttr: 'Excel'
-                //    },
-                //    {
-                //        extend: 'csvHtml5',
-                //        text: '<i class="fa fa-file-text-o">&nbsp;<p class="setfont">Export CSV</p></i>',
-                //        className: 'btn btn-default',
-                //        title: 'Machine Master',
-                //        titleAttr: 'CSV'
-                //    }
-                //],
                 processing: true, // for show progress bar
                 autoWidth: false,
                 ajax: {
                     url: $('#IndexData').data('mc-get-url'),      //"/Customer/GetCustomers",
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Machine Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "MachineCode", "className": "boldColumn", "autoWidth": false },
@@ -169,13 +145,21 @@
             //dtMc.buttons(1, null).container().appendTo(
             //    $('div.dataTables_filter')
             //);
-                
-
-
 
             //dt.on('draw', function () {
             //    global.applyIcheckStyle();
             //});
+
+            //keep the current page after sorting
+            dtMc.on('order', function () {
+                if (dtMc.page() !== page) {
+                    dtMc.page(page).draw('page');
+                }
+            });
+
+            dtMc.on('page', function () {
+                page = dtMc.page();
+            });
 
             //$("div.toolbar").html('<b>C</b>');  //< 'Inline toolbar' >
             $('div.dataTables_filter input').addClass('form-control');
@@ -186,11 +170,17 @@
 
         refresh: function () {
             dtMc.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtMc.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     machineVM.init();
+
+    machineVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

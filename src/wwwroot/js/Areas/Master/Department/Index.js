@@ -9,6 +9,8 @@
     $("#success-alert").hide();
 
     //Grid Table Config
+    var page = 0;
+
     deptVM = {
         dtDept: null,
         init: function () {
@@ -56,7 +58,14 @@
                     url: $('#IndexData').data('dept-get-url'),  
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Department Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "DeptCode", "className": "boldColumn", "autoWidth": false },
@@ -105,6 +114,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtDept.on('order', function () {
+                if (dtDept.page() !== page) {
+                    dtDept.page(page).draw('page');
+                }
+            });
+
+            dtDept.on('page', function () {
+                page = dtDept.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -113,11 +133,17 @@
 
         refresh: function () {
             dtDept.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtDept.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     deptVM.init();
+
+    deptVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

@@ -28,7 +28,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
 
         public CompanyController(IHostingEnvironment hostingEnvironment,
                                  IMemoryCache memoryCache,
-                                 UserManager<ApplicationUser> userManager) : base(userManager, memoryCache)
+                                 UserManager<ApplicationUser> userManager) : base(userManager, hostingEnvironment, memoryCache)
         {
             _hostingEnvironment = hostingEnvironment;
             _cache = memoryCache;

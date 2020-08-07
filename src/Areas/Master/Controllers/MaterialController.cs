@@ -28,7 +28,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
 
         public MaterialController(IHostingEnvironment hostingEnvironment,
                                   IMemoryCache memoryCache,
-                                  UserManager<ApplicationUser> userManager) : base(userManager, memoryCache)
+                                  UserManager<ApplicationUser> userManager) : base(userManager, hostingEnvironment, memoryCache)
         {
             _hostingEnvironment = hostingEnvironment;
             _cache = memoryCache;
@@ -141,6 +141,8 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                         resultObj = await matBll.InsertMaterial(m_Material);
 
                         _cache.Remove("CACHE_MASTER_MATERIAL");
+                        _cache.Remove("CACHE_MASTER_MATERIAL_BYRAWTYPE");
+                        
                     }
 
                     return Json(new { success = true, data = (M_Material)resultObj.ObjectValue, message = "Material Created." });
@@ -285,6 +287,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                         resultObj = await matBll.UpdateMaterial(m_Material);
 
                         _cache.Remove("CACHE_MASTER_MATERIAL");
+                        _cache.Remove("CACHE_MASTER_MATERIAL_BYRAWTYPE");
                     }
 
                     return Json(new { success = true, data = (M_Material)resultObj.ObjectValue, message = "Material Update." });
@@ -350,6 +353,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                     resultObj = await matBll.DeleteMaterial(m_Material);
 
                     _cache.Remove("CACHE_MASTER_MATERIAL");
+                    _cache.Remove("CACHE_MASTER_MATERIAL_BYRAWTYPE");
                 }
 
                 return Json(new { success = true, data = (M_Material)resultObj.ObjectValue, message = "Material Deleted." });
@@ -425,6 +429,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Master.Controllers
                     var rowaffected = await matBll.BulkInsertMaterial(lstMat);
 
                     _cache.Remove("CACHE_MASTER_MATERIAL");
+                    _cache.Remove("CACHE_MASTER_MATERIAL_BYRAWTYPE");
                 }
 
                 return Json(new { success = true, data = lstMat, message = "Import Success." });

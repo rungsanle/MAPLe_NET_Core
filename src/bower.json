@@ -42,13 +42,12 @@
     "jquery-validation-unobtrusive": "3.2.6",
     "datatables.net": "1.10.20",
     "datatables.net-bs": "^2.1.1",
-    "bootstrap-datepicker": "^1.7.0",
     "bootstrap-daterangepicker": "^2.1.25",
-    "moment": "^2.18.1",
+    "moment": "2.24.0",
     "fastclick": "^1.0.6",
     "Flot": "flot#^0.8.3",
     "fullcalendar": "^3.4.0",
-    "inputmask": "jquery.inputmask#^3.3.7",
+    "inputmask": "5.0.3",
     "ion.rangeSlider": "ionrangeslider#^2.2.0",
     "jvectormap": "^2.0.4",
     "jquery-knob": "^1.2.13",
@@ -63,11 +62,13 @@
     "jquery-ui": "1.11.4",
     "jszip": "v2.5.0",
     "datatables-buttons": "1.6.1",
-    "toastr": "2.1.1"
+    "toastr": "2.1.1",
+    "bootstrap-datepicker": "v1.9.0"
   },
   "resolutions": {
     "jquery": "^3.2.1",
     "datatables-buttons": "1.6.1",
-    "datatables.net": "1.10.20"
+    "datatables.net": "1.10.20",
+    "inputmask": "5.0.3"
   }
 }

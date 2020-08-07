@@ -8,6 +8,8 @@
 
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     arrTypeVM = {
         dtArrivalType: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('arrtype-get-url'),    //"/Customer/GetCustomers",
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Arrival Type Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "ArrivalTypeCode", "className": "boldColumn", "autoWidth": false },
@@ -105,6 +114,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtArrivalType.on('order', function () {
+                if (dtArrivalType.page() !== page) {
+                    dtArrivalType.page(page).draw('page');
+                }
+            });
+
+            dtArrivalType.on('page', function () {
+                page = dtArrivalType.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -113,11 +133,17 @@
 
         refresh: function () {
             dtArrivalType.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtArrivalType.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     arrTypeVM.init();
+
+    arrTypeVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

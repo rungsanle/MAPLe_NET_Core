@@ -8,6 +8,8 @@
 
     $("#success-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     whVM = {
         dtWh: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('wh-get-url'),
                     async: true,
                     type: "GET",
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Warehouse Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "WarehouseCode", "className": "boldColumn", "autoWidth": false },
@@ -105,6 +114,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtWh.on('order', function () {
+                if (dtWh.page() !== page) {
+                    dtWh.page(page).draw('page');
+                }
+            });
+
+            dtWh.on('page', function () {
+                page = dtWh.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -113,11 +133,17 @@
 
         refresh: function () {
             dtWh.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtWh.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     whVM.init();
+
+    whVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

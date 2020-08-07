@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <link href="~/css/report/productcard_report.css" type="text/css" rel="stylesheet" />
+    <link href="@ViewBag.FileRefPath\\css\\report\\productcard_report.css" rel="stylesheet" />
     <script>
         var elem = document.getElementById('pageNumber');
         if (parseInt(elem.innerHTML) <= 1) {
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="label-footer">
-                            <img src="~/img/compLogo/ALL_LOGO.jpg" alt="" style="height:15px;width:35px" />
+                            <img src="@ViewBag.FileRefPath\\img\\compLogo\\ALL_LOGO.jpg" alt="" style="height:15px;width:35px" />
                         </div>
                     </div>
                 </div>

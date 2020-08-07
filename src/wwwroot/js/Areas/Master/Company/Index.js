@@ -8,10 +8,12 @@
 
     $("#success-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     compVM = {
-        dt: null,
+        dtComp: null,
         init: function () {
-            dt = $('#tblComp').DataTable({
+            dtComp = $('#tblComp').DataTable({
                 dom: "<'row'<'col-sm-4'B><'col-sm-2'l><'col-sm-6'f>>" +
                      "<'row'<'col-sm-12'tr>>" +
                      "<'row'<'col-sm-6'i><'col-sm-6'p>>",
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('comp-get-url'),
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Company Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "CompanyCode", "className": "boldColumn", "autoWidth": false },
@@ -111,6 +120,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtComp.on('order', function () {
+                if (dtComp.page() !== page) {
+                    dtComp.page(page).draw('page');
+                }
+            });
+
+            dtComp.on('page', function () {
+                page = dtComp.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -118,17 +138,23 @@
         },
 
         refresh: function () {
-            dt.ajax.reload();
+            dtComp.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtComp.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     compVM.init();
 
+    compVM.removeSorting();
+
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {
-            if (dt.page.info().page != 0) {
-                dt.page('first').draw('page');
+            if (dtComp.page.info().page != 0) {
+                dtComp.page('first').draw('page');
             }
         }, 300);
     }
@@ -261,7 +287,7 @@
 
         var api = $(this).attr("href");
         var rowSelect = $(this).parents('tr')[0];
-        var compData = (dt.row(rowSelect).data());
+        var compData = (dtComp.row(rowSelect).data());
         var compId = compData["Id"];
         var compName = compData["CompanyName"];
 
@@ -285,7 +311,7 @@
                                 if (response.success) {
 
                                     //compVM.refresh();
-                                    dt.row(rowSelect).remove().draw(false);
+                                    dtComp.row(rowSelect).remove().draw(false);
 
                                     toastr.success(response.message, 'Delete Company', { timeOut: appSetting.toastrSuccessTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
                                 }

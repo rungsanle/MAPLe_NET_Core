@@ -8,6 +8,8 @@
 
     $("#success-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     custVM = {
         dtCust: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('cust-get-url'),
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Customer Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "CustomerCode", "className": "boldColumn", "autoWidth": false },
@@ -111,6 +120,16 @@
             //dt.on('draw', function () {
             //    global.applyIcheckStyle();
             //});
+            //keep the current page after sorting
+            dtCust.on('order', function () {
+                if (dtCust.page() !== page) {
+                    dtCust.page(page).draw('page');
+                }
+            });
+
+            dtCust.on('page', function () {
+                page = dtCust.page();
+            });
 
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
@@ -120,11 +139,17 @@
 
         refresh: function () {
             dtCust.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtCust.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     custVM.init();
+
+    custVM.removeSorting();
 
     //set default first page
     if (appSetting.defaultFirstPage == 1) {

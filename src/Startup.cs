@@ -24,6 +24,9 @@ using BotDetect.Web;
 using jsreport.AspNetCore;
 using jsreport.Local;
 using jsreport.Binary;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
+using System.Globalization;
 
 namespace Maple2.AdminLTE.Uil
 {
@@ -44,6 +47,13 @@ namespace Maple2.AdminLTE.Uil
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            // The Tempdata provider cookie is not essential. Make it essential
+            // so Tempdata is functional when tracking is disabled.
+            services.Configure<CookieTempDataProviderOptions>(options =>
+            {
+                options.Cookie.IsEssential = true;
             });
 
             //services.AddDbContext<ApplicationDbContext>(options =>
@@ -85,6 +95,9 @@ namespace Maple2.AdminLTE.Uil
             services.AddDbContext<MasterDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDbContext<TransactionDbContext>(options =>
+                options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
             //Imprement In-Memory Cache
             services.AddMemoryCache();
 
@@ -92,7 +105,8 @@ namespace Maple2.AdminLTE.Uil
                 .AddRazorPagesOptions(options =>
                 {
                     options.Conventions.AuthorizeFolder("/");
-
+                    options.Conventions.AllowAnonymousToFolder("/css");
+                    options.Conventions.AllowAnonymousToFolder("/img");
                     options.Conventions.AllowAnonymousToPage("/Error");
                     options.Conventions.AllowAnonymousToPage("/Account/AccessDenied");
                     options.Conventions.AllowAnonymousToPage("/Account/ConfirmEmail");
@@ -119,6 +133,9 @@ namespace Maple2.AdminLTE.Uil
             //Add jsreport
             services.AddJsReport(new LocalReporting()
                 .UseBinary(JsReportBinary.GetBinary())
+                .KillRunningJsReportProcesses()
+                .RunInDirectory(Path.Combine(Directory.GetCurrentDirectory(), "jsreport"))
+                .Configure(cfg => cfg.AllowedLocalFilesAccess().BaseUrlAsWorkingDirectory())
                 .AsUtility()
                 .Create());
 
@@ -159,9 +176,40 @@ namespace Maple2.AdminLTE.Uil
                 app.UseHsts();
             }
 
+            //for using https
             app.UseHttpsRedirection();
+
+            var supportedCultures = new[]
+            {
+                new CultureInfo("fr-FR"),
+            };
+
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("fr-FR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
+
+
             app.UseStaticFiles();
-            //app.UseCookiePolicy();
+
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //    Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\css")),
+            //    RequestPath = new PathString("/css")
+            //});
+
+            //app.UseDirectoryBrowser(new DirectoryBrowserOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //    Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\img")),
+            //    RequestPath = new PathString("/img")
+            //});
+
+
+
 
             // configures Session middleware 
             app.UseSession();
@@ -190,8 +238,7 @@ namespace Maple2.AdminLTE.Uil
                 //    template: "{area=Administrator}/{controller}/{action=Index}/{id?}");
             });
 
-
-
+            //use cookie
             app.UseCookiePolicy();
         }
     }

@@ -13,6 +13,8 @@ $(function () {
 
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     menuVM = {
         dtMenu: null,
         init: function () {
@@ -60,7 +62,14 @@ $(function () {
                     url: $('#IndexData').data('menu-get-url'),    //"/Customer/GetCustomers",
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Menu Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "nameOption", "className": "boldColumn", "autoWidth": false },
@@ -153,6 +162,17 @@ $(function () {
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtMenu.on('order', function () {
+                if (dtMenu.page() !== page) {
+                    dtMenu.page(page).draw('page');
+                }
+            });
+
+            dtMenu.on('page', function () {
+                page = dtMenu.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -161,11 +181,17 @@ $(function () {
 
         refresh: function () {
             dtMenu.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtMenu.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     menuVM.init();
+
+    menuVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

@@ -8,6 +8,8 @@
 
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     productVM = {
         dtMat: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('mat-get-url'),
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Material Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "MaterialCode", "className": "boldColumn", "autoWidth": false },
@@ -106,6 +115,7 @@
                     { "className": "dt-center", "width": "5%", "targets": 10, "orderable": false },
                     { "width": "10%", "targets": 11, "orderable": false }
                 ],
+
                 order: [],
                 lengthMenu: [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]],
                 iDisplayLength: appSetting.tableDisplayLength,
@@ -118,6 +128,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtMat.on('order', function () {
+                if (dtMat.page() !== page) {
+                    dtMat.page(page).draw('page');
+                }
+            });
+
+            dtMat.on('page', function () {
+                page = dtMat.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -126,11 +147,17 @@
 
         refresh: function () {
             dtMat.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtMat.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     productVM.init();
+
+    productVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

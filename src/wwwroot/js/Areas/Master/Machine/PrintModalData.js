@@ -17,6 +17,8 @@
     //-------------------------------------
 
     //Grid Table Config
+    var page_p = 0;
+
     selMcVM = {
         dtSelMc: null,
         init: function () {
@@ -26,20 +28,32 @@
                      "<'row'<'col-sm-6'i><'col-sm-6'p>>",
                 buttons: [
                     {
-                        text: '<i class="fa fa-refresh"></i>',
+                        text: '<i class="fa fa-refresh">&nbsp;<p class="setfont">Refresh</p></i>',
                         titleAttr: 'Refresh',
                         action: function (e, dt, node, config) {
                             dt.ajax.reload(null, false);
                         }
                     }
                 ],
+                initComplete: function () {
+                    var btns = $('.dt-button');
+                    btns.addClass('btn btn-default btn-sm');
+                    btns.removeClass('dt-button');
+                },
                 processing: true, // for show progress bar
                 autoWidth: false,
                 ajax: {
                     url: $('#PrintModalData').data('mc-get-url'),     
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Machine Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { data: null, className: "text-center", autoWidth: false },
@@ -114,6 +128,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtSelMc.on('order', function () {
+                if (dtSelMc.page() !== page_p) {
+                    dtSelMc.page(page_p).draw('page');
+                }
+            });
+
+            dtSelMc.on('page', function () {
+                page_p = dtSelMc.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -123,11 +148,17 @@
 
         refresh: function () {
             dtSelMc.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtSelMc.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     selMcVM.init();
+
+    selMcVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {
@@ -304,7 +335,7 @@
 
         var api = $('#PrintModalData').data('mc-print-url'); // + '?lstSelMc=' + JSON.stringify(addRequestVerificationToken({ lstSelMc: printMachines }));
 
-        document.body.style.cursor = 'wait';
+        global.setCursor('wait', 'wait');
 
         $.ajax({
             async: true,
@@ -329,7 +360,7 @@
                 //window.open(fileURL, 'PopupWindow', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=0,width=850,height=700');
                 wpopup_print = global.popupBottomR(fileURL, "Print Machine Label", '_blank', 875, 660);
 
-                document.body.style.cursor = 'default';
+                global.setCursor('default', 'pointer');
                 //w.onload = function () {
                 //    //this.document.title = "Print Machine Label";
                 //    setTimeout(function () {
@@ -342,9 +373,11 @@
             },
             error: function (xhr, txtStatus, errThrown) {
 
-                var reponseErr = JSON.parse(xhr.responseText);
+                global.setCursor('default', 'pointer');
+               // alert(errThrown.message);
+               // var reponseErr = //JSON.parse(xhr.responseText);
 
-                toastr.error('Error: ' + reponseErr.message, 'Upload Material Type', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                toastr.error('Error: ' + txtStatus, 'Print Label Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
             }
         });
         

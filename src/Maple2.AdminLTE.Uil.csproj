@@ -8,24 +8,29 @@
   <ItemGroup>
     <Compile Remove="Areas\Master\Views\Machine\Material\**" />
     <Compile Remove="Data\**" />
+    <Compile Remove="jsreport\**" />
     <Compile Remove="Migrations\**" />
     <Content Remove="Areas\Master\Views\Machine\Material\**" />
     <Content Remove="Data\**" />
+    <Content Remove="jsreport\**" />
     <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Areas\Master\Views\Machine\Material\**" />
     <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="jsreport\**" />
     <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Areas\Master\Views\Machine\Material\**" />
     <None Remove="Data\**" />
+    <None Remove="jsreport\**" />
     <None Remove="Migrations\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Captcha" Version="4.4.1" />
+    <PackageReference Include="Captcha" Version="4.4.2" />
     <PackageReference Include="jsreport.AspNetCore" Version="2.0.2" />
     <PackageReference Include="jsreport.Binary" Version="2.6.1" />
     <PackageReference Include="jsreport.Local" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" PrivateAssets="All" />
@@ -48,6 +53,7 @@
   <ItemGroup>
     <Folder Include="Areas\Administrator\Data\" />
     <Folder Include="Areas\Master\Data\" />
+    <Folder Include="Areas\Transaction\Data\" />
     <Folder Include="wwwroot\img\compLogo\" />
   </ItemGroup>
   <ItemGroup>

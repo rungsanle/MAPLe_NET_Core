@@ -8,6 +8,8 @@
 
     $("#message-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     appUserVM = {
         dtAppUser: null,
         init: function () {
@@ -52,9 +54,16 @@
                 processing: true, // for show progress bar
                 autoWidth: false,
                 ajax: {
-                    "url": $('#IndexData').data('appu-get-url'),
-                    "type": "GET",
-                    "datatype": "json"
+                    url: $('#IndexData').data('appu-get-url'),
+                    type: "GET",
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Application User Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "Id", "className": "boldColumn", "autoWidth": false },
@@ -86,6 +95,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtAppUser.on('order', function () {
+                if (dtAppUser.page() !== page) {
+                    dtAppUser.page(page).draw('page');
+                }
+            });
+
+            dtAppUser.on('page', function () {
+                page = dtAppUser.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control input-sm');
             $('div.dataTables_length select').addClass('form-control input-sm');
 
@@ -93,11 +113,17 @@
 
         refresh: function () {
             dtAppUser.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtAppUser.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     appUserVM.init();
+
+    appUserVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

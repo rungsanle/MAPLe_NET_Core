@@ -8,6 +8,8 @@
 
     $("#success-alert").hide();
     //Grid Table Config
+    var page = 0;
+
     unitVM = {
         dtUnit: null,
         init: function () {
@@ -55,7 +57,14 @@
                     url: $('#IndexData').data('unit-get-url'),
                     type: "GET",
                     async: true,
-                    datatype: "json"
+                    datatype: "json",
+                    data: null,
+                    error: function (xhr, txtStatus, errThrown) {
+
+                        var reponseErr = JSON.parse(xhr.responseText);
+
+                        toastr.error('Error: ' + reponseErr.message, 'Get Unit Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                    }
                 },
                 columns: [
                     { "data": "UnitCode", "className": "boldColumn", "autoWidth": false },
@@ -103,6 +112,17 @@
             //    global.applyIcheckStyle();
             //});
 
+            //keep the current page after sorting
+            dtUnit.on('order', function () {
+                if (dtUnit.page() !== page) {
+                    dtUnit.page(page).draw('page');
+                }
+            });
+
+            dtUnit.on('page', function () {
+                page = dtUnit.page();
+            });
+
             $('div.dataTables_filter input').addClass('form-control');
             $('div.dataTables_length select').addClass('form-control');
 
@@ -111,11 +131,17 @@
 
         refresh: function () {
             dtUnit.ajax.reload();
+        },
+
+        removeSorting: function () {  //remove order/sorting
+            dtUnit.order([]).draw(false);
         }
     }
 
     // initialize the datatables
     unitVM.init();
+
+    unitVM.removeSorting();
 
     if (appSetting.defaultFirstPage == 1) {
         setTimeout(function () {

@@ -54,9 +54,11 @@
         <!-- =============================================== -->
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            @Html.Partial("_StatusMessage", TempData["StatusMessage"])
+            @*@Html.Partial("_StatusMessage", TempData["StatusMessage"])*@
+            <partial name="_StatusMessage" for=@TempData["StatusMessage"]>
 
             @RenderBody()
+
         </div>
         <!-- /.content-wrapper -->
         <!-- =============================================== -->

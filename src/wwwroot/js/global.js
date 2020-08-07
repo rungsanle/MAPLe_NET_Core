@@ -28,18 +28,36 @@ global.applyIcheckStyle = function () {
 
 global.applyDatepicker = function (id, showtoday) {
 
-    $("input[id$='" + id + "']").inputmask('dd-mm-yyyy', { 'placeholder': 'dd-mm-yyyy' });
+    $("input[id$='" + id + "']").inputmask('dd-mm-yyyy', { placeholder: 'dd-mm-yyyy' });
     $("input[id$='" + id + "']").datepicker({
         format: 'dd-mm-yyyy',
         autoclose: true,
         todayHighlight: true,
         todayBtn: "linked",
+        language: "fr-FR"
     });
 
     if (showtoday) {
         $("input[id$='" + id + "']").datepicker('setDate', 'today');
     }
 }
+
+global.applyDatepickerS = function (id, showtoday, inpFormat = 'dd-mm-yyyy', picFormat = 'dd-mm-yyyy') {
+
+    $("input[id$='" + id + "']").inputmask(inpFormat, { placeholder: inpFormat });
+    $("input[id$='" + id + "']").datepicker({
+        format: picFormat,
+        autoclose: true,
+        todayHighlight: true,
+        todayBtn: "linked",
+        language: "fr-FR"
+    });
+
+    if (showtoday) {
+        $("input[id$='" + id + "']").datepicker('setDate', 'today');
+    }
+}
+
 
 global.showDatepicker = function (id) {
     //$("input[id$='" + id + "']").datepicker("destroy");
@@ -82,15 +100,20 @@ global.localDate = function (locDate, optFormat = 'DD-MM-YYYY') {
     //if (locDate == null) return null;
     if (typeof locDate != 'undefined' && locDate) {
 
-        if (locDate instanceof Date) return locDate;
+        if (locDate instanceof Date) {
+            return locDate
+        };
 
         var resultDate = moment(locDate);
 
+        //.locale('en')
+
         if (!resultDate.isValid()) {
-            resultDate = moment(locDate, optFormat);
+            resultDate = moment(locDate, optFormat);   //moment(locDate, optFormat).locale('en');
         }
 
-        return resultDate.format(optFormat);
+        return resultDate.format(optFormat);    //resultDate.locale('en').format(optFormat); 
+
     } else {
         return '';
     }
@@ -402,5 +425,10 @@ global.popupBottomR = function (url, title, target, w, h) {
 
     return w;
 };
+
+global.setCursor = function (sCur, bCur) {
+    document.body.style.cursor = sCur;
+    $(".btn").css("cursor", bCur);
+}
 
 
