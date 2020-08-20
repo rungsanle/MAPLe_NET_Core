@@ -543,6 +543,8 @@
                 lengthChange: false,
                 responsive: true
             });
+
+            
         },
 
         tbdestroy: function () {
@@ -554,9 +556,10 @@
         }
     }
 
-    
-
     arrDtlVM.init();
+    $("#tblArrivalDtl").append(
+        $('<tfoot/>').append($("#tblArrivalDtl thead tr").clone())
+    );
 
     //$("div.toolbar").html(
     //    '<table id="tblAddMaterial" style="width: 100%;" border="1">' +
@@ -693,41 +696,52 @@
 
         event.preventDefault();
 
-        var itemCode = $('#ItemCode').val();
-        var poLine = 0;
+        //var itemCode = $('#ItemCode').val();
+        //var poLine = 0;
 
-        var noExist = CheckDuplicateArrDtl(itemCode, poLine);
+        //var noExist = CheckDuplicateArrDtl(itemCode, poLine);
 
-        if (noExist) {
+        //if (noExist) {
 
-            dtArrDtl.row.add({
-                Id: 0,
-                ArrivalId: 0,
-                LineNo: dtArrDtl.data().length + 1,
-                PoLineNo: 0,
-                MaterialId: $('#ItemId').val(),
-                MaterialCode: itemCode,
-                MaterialName: $('#ItemName').val(),
-                MaterialDesc: '',
-                OrderQty: $('#ItemQty').val(),
-                RecvQty: 0,
-                LotNo: $('#LotNo').val(),
-                LotDate: global.convertJsonDate($('#LotDate').val()),
-                DetailRemark: $('#ItemRemark').val(),
-                NoOfLabel: 0,
-                GenLabelStatus: 'G',
-                CompanyCode: $("#CompanyCode").val(),
-                RecordFlag: 2 //new record
-            }).draw(false);
+        //    dtArrDtl.row.add({
+        //        Id: 0,
+        //        ArrivalId: 0,
+        //        LineNo: dtArrDtl.data().length + 1,
+        //        PoLineNo: 0,
+        //        MaterialId: $('#ItemId').val(),
+        //        MaterialCode: itemCode,
+        //        MaterialName: $('#ItemName').val(),
+        //        MaterialDesc: '',
+        //        OrderQty: $('#ItemQty').val(),
+        //        RecvQty: 0,
+        //        LotNo: $('#LotNo').val(),
+        //        LotDate: global.convertJsonDate($('#LotDate').val()),
+        //        DetailRemark: $('#ItemRemark').val(),
+        //        NoOfLabel: 0,
+        //        GenLabelStatus: 'G',
+        //        CompanyCode: $("#CompanyCode").val(),
+        //        RecordFlag: 2 //new record
+        //    }).draw(false);
 
-            dtArrDtl.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
-                cell.innerHTML = i + 1;
-            }).draw(false);
+        //    dtArrDtl.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+        //        cell.innerHTML = i + 1;
+        //    }).draw(false);
 
-            $('.dataTables_scrollBody').scrollTop($('.dataTables_scrollBody')[0].scrollHeight);
-        }
+        //    $('.dataTables_scrollBody').scrollTop($('.dataTables_scrollBody')[0].scrollHeight);
+        //}
 
-        ClearPanelItemDetail();
+        //ClearPanelItemDetail();
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>#</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Code</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Name</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Qty</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Recv.</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Lot #</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Lot Date</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Remark</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Label</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Status</td>'));
+        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>AC</td>'));
 
     });
 
@@ -769,39 +783,9 @@
             $('.dataTables_scrollBody').scrollTop($('.dataTables_scrollBody')[0].scrollHeight);
         }
 
-        //var rows = dtArrDtl.rows({ 'search': 'applied' }).nodes();
-
-        //$('input[id$="LotDate"]', dtArrDtl.rows({ 'search': 'applied' }).nodes()).datepicker({
-        //    format: 'dd-mm-yyyy',
-        //    autoclose: true,
-        //    todayHighlight: true,
-        //    todayBtn: "linked",
-        //    language: "fr-FR"
-        //});
-
-
-        //var trLotDate = $('input[id$="LotDate"]', dtArrDtl.rows({ 'search': 'applied' }).nodes());
-
-        //var trLotDate = $('input[id$="LotDate"]', dtArrDtl.row($(this).parents('tr')));
-        //global.applyDatepicker(trLotDate.prop("id"), true);
-
-        
-
         ClearPanelItemDetail();
 
-        //$('.tc_datepicker').each(function () {
-
-        //    $(this).inputmask('dd-mm-yyyy', { placeholder: 'dd-mm-yyyy' });
-        //    $(this).datepicker({
-        //        format: 'dd-mm-yyyy',
-        //        autoclose: true,
-        //        todayHighlight: true,
-        //        todayBtn: "linked",
-        //        language: "fr-FR"
-        //    });
-        //    $(this).datepicker('setDate', 'today');
-
-        //});
+        
 
     });
 
