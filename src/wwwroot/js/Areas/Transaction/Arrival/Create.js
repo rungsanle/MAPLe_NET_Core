@@ -348,26 +348,30 @@
         $('#searchMaterialModal').modal('hide');
 
         //test by jack
+        var curAddRow = (dtArrDtl.row(':last').data());
+
+        console.log(curAddRow);
+
         //var curAddRow = (dtArrDtl.row(':last').data());
-        
-        console.log(activeCurrRow);
-        console.log(activeCurrRow["LineNo"]);
+        //var curAddRow = ($('#tblArrivalDtl tfoot tr').data());
+
+        //console.log(curAddRow);
         //curAddRow["ArrivalId"] = 1;
         //curAddRow["PoLineNo"] = 1;
         //curAddRow["MaterialId"] = 1;
-        activeCurrRow["LineNo"] = 1;
-        activeCurrRow["MaterialCode"] = itemData["MaterialCode"];
-        activeCurrRow["MaterialName"] = itemData["MaterialName"];
 
-        dtArrDtl.row(':last').data(activeCurrRow).draw(false);
+        //curAddRow["MaterialCode"] = itemData["MaterialCode"];
+        //curAddRow["MaterialName"] = itemData["MaterialName"];
+
+        //dtArrDtl.row(':last').data(curAddRow).draw(false);
         //dtArrDtl.row($(this).closest('tr')).data(curAddRow).draw(false);
 
         //$('#tblArrivalDtl').dataTable().fnUpdate(curAddRow, 5, undefined, false);
 
-        console.log('OK');
+        //console.log('OK');
 
 
-        $('#ItemId').val(itemData["Id"]);
+        //$('#ItemId').val(itemData["Id"]);
         $('#ItemCode').val(itemData["MaterialCode"]);
         $('#ItemName').val(itemData["MaterialName"]);
 
@@ -436,68 +440,71 @@
                     },
                     { "data": "PoLineNo", "autoWidth": false },
                     { "data": "MaterialId", "autoWidth": false },
-                    {
-                        "data": "MaterialCode", "autoWidth": false,
-                        render: function (data, type, prod, meta) {
+                    { "data": "MaterialCode", "autoWidth": false },
+                    //{
+                    //    "data": "MaterialCode", "autoWidth": false,
+                    //    render: function (data, type, prod, meta) {
 
-                            if (prod.RecordFlag < 0) {
-                                return '<div class="input-group" style="width:100%">' +
-                                    '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">' +
-                                    '<span class="input-group-btn">' +
-                                    '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
-                                    '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
-                                    '</button>' +
-                                    '</span>' +
-                                    '</div>';
-                            }
-                            else {
-                                return ditem;
-                            }
-                        }
-                    },
+                    //        if (prod.RecordFlag < 0) {
+                    //            return '<div class="input-group" style="width:100%">' +
+                    //                '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">' +
+                    //                '<span class="input-group-btn">' +
+                    //                '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
+                    //                '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
+                    //                '</button>' +
+                    //                '</span>' +
+                    //                '</div>';
+                    //        }
+                    //        else {
+                    //            return ditem;
+                    //        }
+                    //    }
+                    //},
                     { "data": "MaterialName", "autoWidth": false },
                     { "data": "MaterialDesc", "autoWidth": false },
-                    //{ "data": "OrderQty", "autoWidth": false, render: $.fn.dataTable.render.number(',', '.', 4, '') },
-                    {
-                        "data": "OrderQty", "autoWidth": false,
-                        "render": function (data, type, prod, meta) {
-                        
-                            //return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='OrderQty' min='0' type='number' value='" + ditem + "' autocomplete='off' />";
+                    { "data": "OrderQty", "autoWidth": false, render: $.fn.dataTable.render.number(',', '.', 4, '') },
+                    //{
+                    //    "data": "OrderQty", "autoWidth": false,
+                    //    "render": function (data, type, prod, meta) {
 
-                            if (prod.RecordFlag < 0) {
-                                return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='ItemQty' name='ItemQty' min='0' type='number' value='0' autocomplete='off'>";
-                            } else {
-                                return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='OrderQty' min='0' type='number' value='" + data + "' autocomplete='off' />";
-                            }
-                        }
-                    },
+                    //        //return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='OrderQty' min='0' type='number' value='" + ditem + "' autocomplete='off' />";
+
+                    //        if (prod.RecordFlag < 0) {
+                    //            return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='ItemQty' name='ItemQty' min='0' type='number' value='0' autocomplete='off'>";
+                    //        } else {
+                    //            return "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='OrderQty' min='0' type='number' value='" + data + "' autocomplete='off' />";
+                    //        }
+                    //    }
+                    //},
                     { "data": "RecvQty", "autoWidth": false, render: $.fn.dataTable.render.number(',', '.', 4, '') },
-                    {
-                        data: "LotNo", autoWidth: false,
-                        render: function (ditem) {
-                            return "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
-                        }
-                    },
-                    //{ "data": "LotDate", "autoWidth": false },
-                    {
-                        "data": "LotDate", "autoWidth": false, "type": "date",
-                        "render": function (value) {
-                            var hCode = '<div class="input-group date">' +
-                                '<input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">' +
-                                '<span class="input-group-addon" id="showLotDate">' +
-                                    '<i class="fa fa-calendar"></i>' +
-                                '</span>' +
-                                '</div>';
+                    { "data": "LotNo", "autoWidth": false },
+                    //{
+                    //    data: "LotNo", autoWidth: false,
+                    //    render: function (ditem) {
+                    //        return "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
+                    //    }
+                    //},
+                    { "data": "LotDate", "autoWidth": false },
+                    //{
+                    //    "data": "LotDate", "autoWidth": false, "type": "date",
+                    //    "render": function (value) {
+                    //        var hCode = '<div class="input-group date">' +
+                    //            '<input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">' +
+                    //            '<span class="input-group-addon" id="showLotDate">' +
+                    //                '<i class="fa fa-calendar"></i>' +
+                    //            '</span>' +
+                    //            '</div>';
 
-                            return hCode;
-                        }
-                    },
-                    {
-                        "data": "DetailRemark", "autoWidth": false,
-                        render: function (ditem) {
-                            return "<input class='form-control input-sm text-box single-line' style='width:100%' id='ItemRemark' name='ItemRemark' type='text' value=''>";
-                        }
-                    },
+                    //        return hCode;
+                    //    }
+                    //},
+                    { "data": "DetailRemark", "autoWidth": false },
+                    //{
+                    //    "data": "DetailRemark", "autoWidth": false,
+                    //    render: function (ditem) {
+                    //        return "<input class='form-control input-sm text-box single-line' style='width:100%' id='ItemRemark' name='ItemRemark' type='text' value=''>";
+                    //    }
+                    //},
                     { "data": "NoOfLabel", "autoWidth": false },
                     { "data": "GenLabelStatus", "autoWidth": false },
                     { "data": "CompanyCode", "autoWidth": false },
@@ -542,9 +549,71 @@
                 },
                 lengthChange: false,
                 responsive: true
-            });
+                /*,
+                initComplete: function (row, data, start, end, display) {
+                    var api = this.api();
+                    //var footer = $(this).append('<tfoot><tr></tr></tfoot>');
+                    var footer = $(this).append($('<tfoot/>').append($("#tblArrivalDtl thead tr").clone()));
+                    //this.api().columns().every(function () {
+                    //    var column = this;
+                    //    $(footer).append('<th><input type="text" style="width:100%;"></th>');
+                    //});
 
-            
+                    //LineNo
+                    var htmlLineNo = dtArrDtl.rows().count() + 1;
+                    $(footer).append($('<td>' + htmlLineNo + '</td>'));
+
+                    //MaterialCode
+                    var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
+                        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">' +
+                        '<span class="input-group-btn">' +
+                        '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
+                        '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
+                        '</button>' +
+                        '</span>' +
+                        '</div>';
+                    $(footer).append($('<td>' + htmlMaterialCode + '</td>'));
+
+                    //MaterialName
+                    $(footer).append($('<td></td>'));
+
+                    //OrderQty
+                    var htmlOrderQty = "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='ItemQty' name='ItemQty' min='0' type='number' value='0' autocomplete='off'>";
+                    $(footer).append($('<td>' + htmlOrderQty + '</td>'));
+
+                    //RecvQty
+                    $(footer).append($('<td>0</td>'));
+
+                    //LotNo
+                    var htmlLotNo = "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
+                    $(footer).append($('<td>' + htmlLotNo + '</td>'));
+
+                    //LotDate
+                    var htmlLotDate = '<div class="input-group date">' +
+                        '<input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">' +
+                        '<span class="input-group-addon" id="showLotDate">' +
+                        '<i class="fa fa-calendar"></i>' +
+                        '</span>' +
+                        '</div>';
+                    $(footer).append($('<td>' + htmlLotDate + '</td>'));
+
+                    //DetailRemark
+                    var htmlDetailRemark = "<input class='form-control input-sm text-box single-line' style='width:100%' id='ItemRemark' name='ItemRemark' type='text' value=''>";
+                    $(footer).append($('<td>' + htmlDetailRemark + '</td>'));
+
+                    //Label 
+                    $(footer).append($('<td>0</td>'));
+
+                    //Status
+                    $(footer).append($('<td>G</td>'));
+
+                    //Button
+                    var htmlButtonAdd = '<a id="delItem" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+                    $(footer).append($('<td>' + htmlButtonAdd + '</td>'));
+                }
+                */
+
+            });
         },
 
         tbdestroy: function () {
@@ -557,10 +626,12 @@
     }
 
     arrDtlVM.init();
+
     $("#tblArrivalDtl").append(
         $('<tfoot/>').append($("#tblArrivalDtl thead tr").clone())
     );
 
+    
     //$("div.toolbar").html(
     //    '<table id="tblAddMaterial" style="width: 100%;" border="1">' +
     //    '<tbody>' +
@@ -592,6 +663,8 @@
 
     setTimeout(function () {
         dtArrDtl.columns.adjust().draw();
+
+        CreateNewArrivalDtlRow();
     }, 200);
 
     $('#tblArrivalDtl').on('click', '#searchItem', function (event) {
@@ -602,9 +675,51 @@
 
         matVM.init();
 
-        var row = $(this).parents('tr')[0];
-        activeCurrRow = (dtArrDtl.row(row).data());
+        //var row = $(this).parents('tr')[0];
+        //activeCurrRow = (dtArrDtl.row(row).data());
     });
+
+    $('#tblArrivalDtl').on('click', '#btnAddDtl', function (event) {
+
+        event.preventDefault();
+
+        var itemCode = $('#ItemCode').val();
+        var poLine = 0;
+
+        var noExist = true;   //CheckDuplicateArrDtl(itemCode, poLine);
+
+        if (noExist) {
+
+            dtArrDtl.row.add({
+                Id: 0,
+                ArrivalId: 0,
+                LineNo: dtArrDtl.data().length + 1,
+                PoLineNo: 0,
+                MaterialId: -1,
+                MaterialCode: $('#ItemCode').val(),
+                MaterialName: $('#ItemName').val(),
+                MaterialDesc: '',
+                OrderQty: $('#ItemQty').val(),
+                RecvQty: 0,
+                LotNo: $('#LotNo').val(),
+                LotDate: global.localDate($("#LotDate").val()),
+                DetailRemark: $('#ItemRemark').val(),
+                NoOfLabel: 0,
+                GenLabelStatus: 'N',
+                CompanyCode: $("#CompanyCode").val(),
+                RecordFlag: 2
+            }).draw(false);
+
+            dtArrDtl.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                cell.innerHTML = i + 1;
+            }).draw(false);
+
+            $('.dataTables_scrollBody').scrollTop($('.dataTables_scrollBody')[0].scrollHeight);
+
+            CreateNewArrivalDtlRow();
+        }
+    });
+
 
     //Delete
     $('#tblArrivalDtl').on('click', '#delItem', function (event) {
@@ -650,26 +765,28 @@
             dtArrDtl.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
                 cell.innerHTML = i + 1;
             }).draw(false);
+
+            CreateNewArrivalDtlRow();   
         }
         else {
             
         }
     });
 
-    $("#tblArrivalDtl").on("keyup", "input[type='number']", function (e) {
+    //$("#tblArrivalDtl").on("keyup", "input[type='number']", function (e) {
 
-        var rData = dtArrDtl.rows($(this).closest("tr")).data()[0];
-        rData.OrderQty = $(this).val();
+    //    var rData = dtArrDtl.rows($(this).closest("tr")).data()[0];
+    //    rData.OrderQty = $(this).val();
 
-    });
+    //});
 
-    $('#tblArrivalDtl').on('click', '#showLotDate', function (event) {
+    //$('#tblArrivalDtl').on('click', '#showLotDate', function (event) {
 
-        //event.preventDefault();
+    //    event.preventDefault();
 
-        var trLotDate = $('input[id$="LotDate"]', $(this).closest("tr"));
-        global.showDatepicker(trLotDate.prop("id"));
-    });
+    //    var trLotDate = $('input[id$="LotDate"]', $(this).closest("tr"));
+    //    global.showDatepicker(trLotDate.prop("id"));
+    //});
 
     /*-------------- END ARRIVAL DETAIL --------------*/
 
@@ -695,6 +812,8 @@
     $("#btnAddArrDtl").on("click", function (event) {
 
         event.preventDefault();
+
+        CreateNewArrivalDtlRow();
 
         //var itemCode = $('#ItemCode').val();
         //var poLine = 0;
@@ -731,17 +850,9 @@
         //}
 
         //ClearPanelItemDetail();
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>#</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Code</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Name</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Qty</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Recv.</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Lot #</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Lot Date</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Remark</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Label</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>Status</td>'));
-        $('#tblArrivalDtl tfoot tr:first-child').append($('<td>AC</td>'));
+        
+        
+
 
     });
 
@@ -938,6 +1049,64 @@ function addRequestVerificationToken(data) {
     data.__RequestVerificationToken = $('input[name=__RequestVerificationToken]').val();
     return data;
 };
+
+function CreateNewArrivalDtlRow() {
+
+    //LineNo (New)
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right"><span class="fa fa-asterisk" aria-hidden="true"></td>'));
+
+    //MaterialCode
+    var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
+        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">' +
+        '<span class="input-group-btn">' +
+        '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
+        '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
+        '</button>' +
+        '</span>' +
+        '</div>';
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-left">' + htmlMaterialCode + '</td>'));
+
+    //MaterialName
+    var htmlMaterialName = "<input class='form-control input-sm text-box single-line' style='width: 100%' id='ItemName' name='ItemName' readonly='readonly' type='text' value=''>";
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlMaterialName + '</td>'));
+
+    //OrderQty
+    var htmlOrderQty = "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='ItemQty' name='ItemQty' min='0' type='number' value='0' autocomplete='off'>";
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-right">' + htmlOrderQty + '</td>'));
+
+    //RecvQty
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right">0</td>'));
+
+    //LotNo
+    var htmlLotNo = "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlLotNo + '</td>'));
+
+    //LotDate
+    var htmlLotDate = '<div class="input-group date">' +
+        '<input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">' +
+        '<span class="input-group-addon" onclick="global.showDatepicker(\'LotDate\');">' +
+        '<i class="fa fa-calendar"></i>' +
+        '</span>' +
+        '</div>';
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlLotDate + '</td>'));
+
+    //DetailRemark
+    var htmlDetailRemark = "<input class='form-control input-sm text-box single-line' style='width:100%' id='ItemRemark' name='ItemRemark' type='text' value=''>";
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlDetailRemark + '</td>'));
+
+    //Label 
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>0</td>'));
+
+    //Status
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>G</td>'));
+
+    //Button
+    var htmlButtonAdd = '<a id="btnAddDtl" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>';
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlButtonAdd + '</td>'));
+
+
+    global.applyDatepicker($("#LotDate").prop("id"), true);
+}
 
 function ClearPanelItemDetail() {
     $('#ItemCode').val('');

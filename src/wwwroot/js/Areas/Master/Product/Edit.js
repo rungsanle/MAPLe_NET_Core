@@ -31,6 +31,8 @@
 
     //End----check clear require---//
 
+    alert($("#PackageStdQty").val());
+
     /*-------------- BEGIN PRODUCTION TYPE --------------*/
     $('#ProductionType').inputpicker({
         url: $('#EditData').data('prodtype-get-url'),
