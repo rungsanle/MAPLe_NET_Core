@@ -119,7 +119,7 @@
                                             <label asp-for="VendorCode" class="control-label input-sm"></label>
                                             <input asp-for="VendorId" type="hidden" />
                                             <div class="input-group">
-                                                <input asp-for="VendorCode" class="form-control input-sm text-code" />
+                                                <input asp-for="VendorCode" class="form-control input-sm text-code" autocomplete="off" />
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-browse btn-sm btn-flat" data-toggle="modal" id="btnSearchVendor">
                                                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -136,7 +136,7 @@
                                         <div class="form-group col-sm-2">
                                             <label asp-for="PurchaseOrderNo" class="control-label input-sm"></label>
                                             <div class="input-group">
-                                                <input asp-for="PurchaseOrderNo" class="form-control input-sm text-bold" />
+                                                <input asp-for="PurchaseOrderNo" class="form-control input-sm text-bold" autocomplete="off" />
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search PO" id="btnSearchPO">
                                                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -148,7 +148,7 @@
                                         <div class="form-group col-sm-2">
                                             <label asp-for="DocRefNo" class="control-label input-sm"></label>
                                             <div class="input-group">
-                                                <input asp-for="DocRefNo" class="form-control input-sm text-upper" />
+                                                <input asp-for="DocRefNo" class="form-control input-sm text-upper" autocomplete="off" />
                                                 <div class="input-group-addon">
                                                     <i class="fa  fa-file-o"></i>
                                                 </div>
@@ -207,42 +207,42 @@
 
                             <div class="form-group row">
                                 @*<div class="form-group col-sm-2">
-                                    <label class="control-label input-sm" for="ItemCode">Item Code</label>
-                                    <input id="ItemId" name="ItemId" type="hidden" value="">
-                                    <div class="input-group">
-                                        <input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">
-                                        <span class="input-group-btn">
-                                            <button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="btnSearchMaterial">
-                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                            </button>
-                                        </span>
-                                    </div>
-                                </div>*@
+                    <label class="control-label input-sm" for="ItemCode">Item Code</label>
+                    <input id="ItemId" name="ItemId" type="hidden" value="">
+                    <div class="input-group">
+                        <input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="btnSearchMaterial">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>*@
                                 @*<div class="form-group col-sm-3">
-                                    <label class="control-label input-sm" for="ItemName">ITEM NAME</label>
-                                    <input class="form-control input-sm col-sm-3 text-box single-line" id="ItemName" name="ItemName" readonly="readonly" type="text" value="">
-                                </div>*@
+                    <label class="control-label input-sm" for="ItemName">ITEM NAME</label>
+                    <input class="form-control input-sm col-sm-3 text-box single-line" id="ItemName" name="ItemName" readonly="readonly" type="text" value="">
+                </div>*@
                                 @*<div class="form-group col-sm-1">
-                                    <label class="control-label input-sm" for="ItemQty">Qty</label>
-                                    <input class="form-control input-sm text-align-right text-box single-line" id="ItemQty" name="ItemQty" min="0" type="number" value="">
-                                </div>*@
+                    <label class="control-label input-sm" for="ItemQty">Qty</label>
+                    <input class="form-control input-sm text-align-right text-box single-line" id="ItemQty" name="ItemQty" min="0" type="number" value="">
+                </div>*@
                                 @*<div class="form-group col-sm-2">
-                                    <label class="control-label input-sm" for="LotNo">LOT NO</label>
-                                    <input class="form-control input-sm text-box single-line" id="LotNo" name="LotNo" type="text" value="">
-                                </div>*@
+                    <label class="control-label input-sm" for="LotNo">LOT NO</label>
+                    <input class="form-control input-sm text-box single-line" id="LotNo" name="LotNo" type="text" value="">
+                </div>*@
                                 @*<div class="form-group col-sm-2">
-                                    <label class="control-label input-sm" for="LotDate">LOT DATE</label>
-                                    <div class="input-group date">
-                                        <input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">
-                                        <span class="input-group-addon" onclick="global.showDatepicker('LotDate');">
-                                            <i class="fa fa-calendar"></i>
-                                        </span>
-                                    </div>
-                                </div>*@
+                    <label class="control-label input-sm" for="LotDate">LOT DATE</label>
+                    <div class="input-group date">
+                        <input class="form-control input-sm text-box single-line" data-val="true" data-val-date="The field LOT DATE must be a date." id="LotDate" name="LotDate" type="datetime" value="">
+                        <span class="input-group-addon" onclick="global.showDatepicker('LotDate');">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>*@
                                 @*<div class="form-group col-sm-2">
-                                    <label class="control-label input-sm" for="ItemRemark">REMARK</label>
-                                    <input class="form-control input-sm text-box single-line" id="ItemRemark" name="ItemRemark" type="text" value="">
-                                </div>*@
+                    <label class="control-label input-sm" for="ItemRemark">REMARK</label>
+                    <input class="form-control input-sm text-box single-line" id="ItemRemark" name="ItemRemark" type="text" value="">
+                </div>*@
                             </div>
 
                             <div class="form-group row">
@@ -266,7 +266,8 @@
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
 
-                            <table id="tblArrivalDtl" class="table table-striped table-bordered table-hover table-sm">  @*display compact*@
+                            <table id="tblArrivalDtl" class="table table-striped table-bordered table-hover table-sm">
+                                @*display compact*@
                                 <thead>
                                     <tr>
                                         <th>ArrivalId</th>
@@ -296,7 +297,14 @@
 
                         </div>
                         <!-- /.box-body -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="control-label" id="lblArrDtlRecords">Total 2 Records</label>
+                            </div>
+                        </div>
                     </div>
+
+                    
 
                     <div class="modal-footer">
                         <div class="form-group">

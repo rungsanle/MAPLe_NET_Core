@@ -212,16 +212,6 @@
 
     /*---------------BEGIN MATERIAL SEARCH-----------------*/
 
-    //$("#btnSearchMaterial").on("click", function (event) {
-
-    //    event.preventDefault();
-
-    //    $('#searchMaterialModal').modal('show');
-
-    //    matVM.init();
-
-    //});
-
     $("#searchMaterialModal").on("hidden.bs.modal", function (event) {
 
         event.preventDefault();
@@ -236,52 +226,58 @@
 
         return false;
     });
+    
 
-    $("#ItemCode").keyup(function (e) {
-        if (e.which == 13) {
-            // Enter key pressed
-            if ($(this).val() === '') {
-                $('#ItemCode').focus();
-                return;
-            }
+    
 
-            var api = $('#CreateData').data('mat-get-url'); // + "/" + $(this).val();
+    //$("#ItemCode").keyup(function (e) {
 
-            $.ajax({
-                type: "GET",
-                url: api,
-                async: true,
-                dataType: 'json',
-                contentType: "application/json",
-                data: {
-                    vcode: $(this).val(),
-                    rawMatTypeId: $("#RawMatTypeName").val(),
-                    companyCode: $("#CompanyCode").val()
-                },
-                success: function (response) {
+    //    if (e.which == 13) {
+    //        // Enter key pressed
+    //        if ($(this).val() === '') {
+    //            $('#ItemCode').focus();
+    //            return;
+    //        }
 
-                    if (response.success) {
+    //        var api = $('#CreateData').data('mat-get-url'); // + "/" + $(this).val();
 
-                        $('#ItemId').val(response.data.Id);
-                        $('#ItemName').val(response.data.MaterialName);
+    //        alert(api);
 
-                        $('#ItemQty').focus();
+    //        $.ajax({
+    //            type: "GET",
+    //            url: api,
+    //            async: true,
+    //            dataType: 'json',
+    //            contentType: "application/json",
+    //            data: {
+    //                vcode: $(this).val(),
+    //                rawMatTypeId: $("#RawMatTypeName").val(),
+    //                companyCode: $("#CompanyCode").val()
+    //            },
+    //            success: function (response) {
 
-                    } else {
-                        //alert(response.message);
-                        $("#btnSearchMaterial").click();
-                    }
+    //                if (response.success) {
 
-                },
-                error: function (xhr, txtStatus, errThrown) {
+    //                    $('#ItemId').val(response.data.Id);
+    //                    $('#ItemName').val(response.data.MaterialName);
 
-                    var reponseErr = JSON.parse(xhr.responseText);
+    //                    $('#ItemQty').focus();
 
-                    toastr.error('Error: ' + reponseErr.message, 'Select Items Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
-                }
-            });
-        }
-    });
+    //                } else {
+    //                    //alert(response.message);
+    //                    $("#btnSearchMaterial").click();
+    //                }
+
+    //            },
+    //            error: function (xhr, txtStatus, errThrown) {
+
+    //                var reponseErr = JSON.parse(xhr.responseText);
+
+    //                toastr.error('Error: ' + reponseErr.message, 'Select Items Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+    //            }
+    //        });
+    //    }
+    //});
 
     matVM = {
         dtMaterial: null,
@@ -337,7 +333,8 @@
         }
     }
 
-    //Select from Vendor LOV
+
+    //Select from Material LOV
     $('#tblMaterial').on("click", "#selectMaterial", function (event) {
 
         event.preventDefault();
@@ -348,9 +345,9 @@
         $('#searchMaterialModal').modal('hide');
 
         //test by jack
-        var curAddRow = (dtArrDtl.row(':last').data());
+        //var curAddRow = (dtArrDtl.row(':last').data());
 
-        console.log(curAddRow);
+        //console.log(curAddRow);
 
         //var curAddRow = (dtArrDtl.row(':last').data());
         //var curAddRow = ($('#tblArrivalDtl tfoot tr').data());
@@ -371,7 +368,7 @@
         //console.log('OK');
 
 
-        //$('#ItemId').val(itemData["Id"]);
+        $('#ItemId').val(itemData["Id"]);
         $('#ItemCode').val(itemData["MaterialCode"]);
         $('#ItemName').val(itemData["MaterialName"]);
 
@@ -664,6 +661,112 @@
         CreateNewArrivalDtlRow();
     }, 200);
 
+    //when tab
+    $('#tblArrivalDtl').on("keydown", "#ItemCode", function (event) {
+
+        if (event.keyCode == 9) var thisTab = $(":focus").attr("tabindex");
+        if (event.keyCode == 9) {
+
+            if ($(this).val() === '') {
+                $('#ItemCode').focus();
+                return;
+            }
+
+            var api = $('#CreateData').data('mat-get-url'); // + "/" + $(this).val();
+            var itemCode = $(this).val();
+
+            $.ajax({
+                type: "GET",
+                url: api,
+                async: true,
+                dataType: 'json',
+                contentType: "application/json",
+                data: {
+                    vcode: itemCode,
+                    rawMatTypeId: $("#RawMatTypeName").val(),
+                    companyCode: $("#CompanyCode").val()
+                },
+                success: function (response) {
+
+                    if (response.success) {
+
+                        $('#ItemId').val(response.data.Id);
+                        $('#ItemName').val(response.data.MaterialName);
+
+                        $('#ItemQty').focus().select();
+
+                    } else {
+
+                        toastr.error('"' + itemCode + '" ' + response.message, 'Search Item', { timeOut: appSetting.toastrSuccessTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+
+                        $("#searchItem").click();
+                    }
+
+                },
+                error: function (xhr, txtStatus, errThrown) {
+
+                    var reponseErr = JSON.parse(xhr.responseText);
+
+                    toastr.error('Error: ' + reponseErr.message, 'Select Items Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                }
+            });
+        }
+    });
+
+    //when enter
+    $('#tblArrivalDtl').on("keyup", "#ItemCode", function (event) {
+
+        event.preventDefault();
+
+
+        if (event.which == 13) {
+            // Enter key pressed
+            if ($(this).val() === '') {
+                $('#ItemCode').focus();
+                return;
+            }
+
+            var api = $('#CreateData').data('mat-get-url'); // + "/" + $(this).val();
+            var itemCode = $(this).val();
+
+            $.ajax({
+                type: "GET",
+                url: api,
+                async: true,
+                dataType: 'json',
+                contentType: "application/json",
+                data: {
+                    vcode: itemCode,
+                    rawMatTypeId: $("#RawMatTypeName").val(),
+                    companyCode: $("#CompanyCode").val()
+                },
+                success: function (response) {
+
+                    if (response.success) {
+
+                        $('#ItemId').val(response.data.Id);
+                        $('#ItemName').val(response.data.MaterialName);
+
+                        $('#ItemQty').focus().select();
+
+                    } else {
+
+                        toastr.error('"' + itemCode + '" ' + response.message, 'Search Item', { timeOut: appSetting.toastrSuccessTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+
+                        $("#searchItem").click();
+                    }
+
+                },
+                error: function (xhr, txtStatus, errThrown) {
+
+                    var reponseErr = JSON.parse(xhr.responseText);
+
+                    toastr.error('Error: ' + reponseErr.message, 'Select Items Error', { timeOut: appSetting.toastrErrorTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
+                }
+            });
+        }
+    });
+
     $('#tblArrivalDtl').on('click', '#searchItem', function (event) {
 
         event.preventDefault();
@@ -714,6 +817,8 @@
             $('.dataTables_scrollBody').scrollTop($('.dataTables_scrollBody')[0].scrollHeight);
 
             CreateNewArrivalDtlRow();
+
+            $('#ItemCode').focus();
         }
     });
 
@@ -811,6 +916,8 @@
         event.preventDefault();
 
         CreateNewArrivalDtlRow();
+
+        
 
         //var itemCode = $('#ItemCode').val();
         //var poLine = 0;
@@ -1052,9 +1159,12 @@ function CreateNewArrivalDtlRow() {
     //LineNo (New)
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right"><span class="fa fa-asterisk" aria-hidden="true"></td>'));
 
+
+
     //MaterialCode
     var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
-        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="">' +
+        '<input type="hidden" id="ItemId" name="ItemId" value="">' +
+        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="" autocomplete="off">' +
         '<span class="input-group-btn">' +
         '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
         '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
@@ -1064,7 +1174,7 @@ function CreateNewArrivalDtlRow() {
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-left">' + htmlMaterialCode + '</td>'));
 
     //MaterialName
-    var htmlMaterialName = "<input class='form-control input-sm text-box single-line' style='width: 100%' id='ItemName' name='ItemName' readonly='readonly' type='text' value=''>";
+    var htmlMaterialName = "<input class='form-control input-sm text-box single-line' style='width: 100%' id='ItemName' name='ItemName' readonly='readonly' type='text' value='' tabindex='-1' onfocus='this.blur();'>";
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlMaterialName + '</td>'));
 
     //OrderQty
@@ -1092,17 +1202,25 @@ function CreateNewArrivalDtlRow() {
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlDetailRemark + '</td>'));
 
     //Label 
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>0</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right">0</td>'));
 
     //Status
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>G</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-center">G</td>'));
 
     //Button
-    var htmlButtonAdd = '<a id="btnAddDtl" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>';
+    //var htmlButtonAdd = '<a id="btnAddDtl" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>';
+    var htmlButtonAdd = '<span class="input-group-btn">' +
+        '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Add Detail" id="btnAddDtl">' +
+        '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>' +
+        '</button>' +
+        '</span>';
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlButtonAdd + '</td>'));
 
 
     global.applyDatepicker($("#LotDate").prop("id"), true);
+
+
+
 }
 
 function ClearPanelItemDetail() {
