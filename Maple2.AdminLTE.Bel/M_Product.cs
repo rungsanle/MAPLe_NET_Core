@@ -54,7 +54,7 @@ namespace Maple2.AdminLTE.Bel
         public string Unit { get; set; }
 
         [Display(Name = "Package")]
-        [DisplayFormat(DataFormatString = "{0:#,##0.00}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
         public decimal? PackageStdQty { get; set; }
 
         [Display(Name = "Sales Price 1")]

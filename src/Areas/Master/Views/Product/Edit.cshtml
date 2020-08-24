@@ -126,7 +126,7 @@
                                         <div class="form-group row">
                                             <label asp-for="PackageStdQty" class="control-label input-sm col-md-3"></label>
                                             <div class="col-sm-4">
-                                                <input asp-for="PackageStdQty" class="form-control input-sm text-align-right" type="number" min="0" step="any" style="width:200px;" />
+                                                <input asp-for="PackageStdQty" class="form-control input-sm text-align-right" min="0" type="number" style="width:200px;" />  @*type="number"*@
                                                 <span asp-validation-for="PackageStdQty" class="text-danger"></span>
                                             </div>
                                             <label asp-for="Unit" class="control-label input-sm col-md-1"></label>

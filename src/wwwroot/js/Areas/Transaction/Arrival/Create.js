@@ -375,10 +375,7 @@
         $('#ItemCode').val(itemData["MaterialCode"]);
         $('#ItemName').val(itemData["MaterialName"]);
 
-
-        
-
-        //$('#ItemQty').focus();
+        $('#ItemQty').focus().select();
 
     });
 
