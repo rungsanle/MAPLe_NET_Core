@@ -369,7 +369,8 @@
 
 
         $('#ItemId').val(itemData["Id"]);
-        $('#ItemCode').val(itemData["MaterialCode"]);
+        $('#ItemCode').val(itemData["MaterialCode"]);     
+
         $('#ItemName').val(itemData["MaterialName"]);
 
         $('#ItemQty').focus().select();
@@ -661,6 +662,8 @@
         CreateNewArrivalDtlRow();
     }, 200);
 
+
+    //------------------------- ItemCode -------------------------------//
     //when tab
     $('#tblArrivalDtl').on("keydown", "#ItemCode", function (event) {
 
@@ -671,6 +674,8 @@
                 $('#ItemCode').focus();
                 return;
             }
+
+            
 
             var api = $('#CreateData').data('mat-get-url'); // + "/" + $(this).val();
             var itemCode = $(this).val();
@@ -767,6 +772,7 @@
         }
     });
 
+    //when click button search
     $('#tblArrivalDtl').on('click', '#searchItem', function (event) {
 
         event.preventDefault();
@@ -779,9 +785,106 @@
         //activeCurrRow = (dtArrDtl.row(row).data());
     });
 
+    //------------------------- ItemCode -------------------------------//
+
+    //------------------------- ItemQty -------------------------------//
+
+    //when tab
+    $('#tblArrivalDtl').on("keydown", "#ItemQty", function (event) {
+
+        if (event.keyCode == 9) var thisTab = $(":focus").attr("tabindex");
+        if (event.keyCode == 9) {
+
+            var itemQty = $('#ItemQty').val();
+            
+
+            if (isNaN(itemQty) || itemQty < 1) {
+
+                setTimeout(function () {
+                    $('#ItemQty').focus().select();
+                }, 50);
+
+                return;
+            }
+
+            setTimeout(function () {
+                $('#LotNo').focus().select();
+            }, 50);
+           
+        }
+    });
+
+    //when enter
+    $('#tblArrivalDtl').on("keyup", "#ItemQty", function (event) {
+
+        event.preventDefault();
+
+        if (event.which == 13) {
+
+            var itemQty = $('#ItemQty').val();
+            // Enter key pressed
+            if (isNaN(itemQty) || itemQty < 1) {
+
+                $('#ItemQty').focus().select();
+
+                return;
+            }
+
+            $('#LotNo').focus().select();
+            
+        }
+    });
+
+    //------------------------- ItemQty -------------------------------//
+
+    //------------------------- LotNo -------------------------------//
+    
+    //when enter
+    $('#tblArrivalDtl').on("keyup", "#LotNo", function (event) {
+
+        event.preventDefault();
+
+        if (event.which == 13) {
+            $('#LotDate').focus().select();
+        }
+    });
+
+    //------------------------- LotNo -------------------------------//
+
+    //------------------------- LotDate -------------------------------//
+
+    //when enter
+    $('#tblArrivalDtl').on("keyup", "#LotDate", function (event) {
+
+        event.preventDefault();
+
+        if (event.which == 13) {
+            $('#ItemRemark').focus().select();
+        }
+    });
+
+    //------------------------- LotDate -------------------------------//
+
+    //------------------------- ItemRemark -------------------------------//
+
+    //when enter
+    $('#tblArrivalDtl').on("keyup", "#ItemRemark", function (event) {
+
+        event.preventDefault();
+
+        if (event.which == 13) {
+            $('#btnAddDtl').focus();
+        }
+    });
+
+    //------------------------- ItemRemark -------------------------------//
+
+
     $('#tblArrivalDtl').on('click', '#btnAddDtl', function (event) {
 
         event.preventDefault();
+
+        if (!ValidationRecordDetail()) return;
 
         var itemCode = $('#ItemCode').val();
         var poLine = 0;
@@ -1157,14 +1260,15 @@ function addRequestVerificationToken(data) {
 function CreateNewArrivalDtlRow() {
 
     //LineNo (New)
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right"><span class="fa fa-asterisk" aria-hidden="true"></td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right">(new)</td>'));
+    //<span class="fa fa-asterisk" aria-hidden="true">
 
 
 
     //MaterialCode
     var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
         '<input type="hidden" id="ItemId" name="ItemId" value="">' +
-        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" value="" autocomplete="off">' +
+        '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" data-toggle="tooltip" data-placement="bottom" title="This field is require!!" value="" autocomplete="off">' +
         '<span class="input-group-btn">' +
         '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search Material" id="searchItem">' +
         '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>' +
@@ -1174,11 +1278,11 @@ function CreateNewArrivalDtlRow() {
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-left">' + htmlMaterialCode + '</td>'));
 
     //MaterialName
-    var htmlMaterialName = "<input class='form-control input-sm text-box single-line' style='width: 100%' id='ItemName' name='ItemName' readonly='readonly' type='text' value='' tabindex='-1' onfocus='this.blur();'>";
+    var htmlMaterialName = "<input class='form-control input-sm text-box single-line' style='width:100%' id='ItemName' name='ItemName' readonly='readonly' type='text' value='' tabindex='-1' onfocus='this.blur();'>";
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlMaterialName + '</td>'));
 
     //OrderQty
-    var htmlOrderQty = "<input class='form-control input-sm text-align-right text-box single-line' style='width:100%' id='ItemQty' name='ItemQty' min='0' type='number' value='0' autocomplete='off'>";
+    var htmlOrderQty = '<input class="form-control input-sm text-align-right text-box single-line" style="width:100%" id="ItemQty" name="ItemQty" min="0" type="number" data-toggle="tooltip" data-placement="bottom" title="Qty not valid!!" value="0" autocomplete="off">';
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-right">' + htmlOrderQty + '</td>'));
 
     //RecvQty
@@ -1221,6 +1325,34 @@ function CreateNewArrivalDtlRow() {
 
 
 
+}
+
+function ValidationRecordDetail() {
+
+    //Item Code
+    var itemCode = $('#ItemCode').val();
+    if (itemCode === '') {
+
+        $('#ItemCode[data-toggle="tooltip"]').tooltip('show');
+
+        $('#ItemCode').focus();
+
+        return false;
+    }
+
+    //Item Code
+    var itemQty = $('#ItemQty').val();
+
+    if (isNaN(itemQty) || itemQty < 1) {
+
+        $('#ItemQty[data-toggle="tooltip"]').tooltip('show');
+
+        $('#ItemQty').focus().select();
+
+        return false;
+    }
+
+    return true;
 }
 
 function ClearPanelItemDetail() {
