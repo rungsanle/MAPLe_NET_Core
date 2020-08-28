@@ -43,7 +43,7 @@ namespace Maple2.AdminLTE.Bll
 
         private bool IsDisposed = false;
         private AppConfiguration appSetting;
-        private DbContextOptions contextOptions;
+        private DbContextOptions<TransactionDbContext> contextOptions;
 
         private string compCode = string.Empty;
 
@@ -53,7 +53,7 @@ namespace Maple2.AdminLTE.Bll
         {
             appSetting = new AppConfiguration();
 
-            contextOptions = new DbContextOptionsBuilder()
+            contextOptions = new DbContextOptionsBuilder<TransactionDbContext>()
                             .UseMySql(appSetting.ConnectionString)
                             .Options;
         }
@@ -62,7 +62,7 @@ namespace Maple2.AdminLTE.Bll
         {
             appSetting = new AppConfiguration();
 
-            contextOptions = new DbContextOptionsBuilder()
+            contextOptions = new DbContextOptionsBuilder<TransactionDbContext>()
                             .UseMySql(appSetting.ConnectionString)
                             .Options;
 

@@ -6,7 +6,7 @@ namespace Maple2.AdminLTE.Dal
 {
     public class TransactionDbContext : DbContext
     {
-        public TransactionDbContext(DbContextOptions options) : base(options)
+        public TransactionDbContext(DbContextOptions<TransactionDbContext> options) : base(options)
         {
         }
 

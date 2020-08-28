@@ -54,27 +54,33 @@ namespace Maple2.AdminLTE.Bel
         public string Unit { get; set; }
 
         [Display(Name = "Package")]
-        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:#,0.0000}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? PackageStdQty { get; set; }
 
         [Display(Name = "Sales Price 1")]
-        [DisplayFormat(DataFormatString = "{0:#,##0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? SalesPrice1 { get; set; }
 
         [Display(Name = "Sales Price 2")]
-        [DisplayFormat(DataFormatString = "{0:0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? SalesPrice2 { get; set; }
 
         [Display(Name = "Sales Price 3")]
-        [DisplayFormat(DataFormatString = "{0:0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? SalesPrice3 { get; set; }
 
         [Display(Name = "Sales Price 4")]
-        [DisplayFormat(DataFormatString = "{0:0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? SalesPrice4 { get; set; }
 
         [Display(Name = "Sales Price 5")]
-        [DisplayFormat(DataFormatString = "{0:0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal? SalesPrice5 { get; set; }
 
         [Required(ErrorMessage = "GLSalesAccount|G/L Sales Account Is Required!!")]

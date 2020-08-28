@@ -2,6 +2,8 @@
 
     $('input').attr('autocomplete', 'off');
 
+    
+
     var arrRemoveSubDetails = new Array();
 
     global.applyDatepicker($("#ArrivalDate").prop("id"), false);

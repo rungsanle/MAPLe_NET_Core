@@ -42,7 +42,7 @@ namespace Maple2.AdminLTE.Bll
 
         private bool IsDisposed = false;
         private AppConfiguration appSetting;
-        private DbContextOptions contextOptions;
+        private DbContextOptions<MasterDbContext> contextOptions;
 
         #endregion
 
@@ -50,7 +50,7 @@ namespace Maple2.AdminLTE.Bll
         {
             appSetting = new AppConfiguration();
 
-            contextOptions = new DbContextOptionsBuilder()
+            contextOptions = new DbContextOptionsBuilder<MasterDbContext>()
                             .UseMySql(appSetting.ConnectionString)
                             .Options;
         }

@@ -367,7 +367,7 @@
 
         //console.log('OK');
 
-
+        $('#hPoLine').val(0);
         $('#ItemId').val(itemData["Id"]);
         $('#ItemCode').val(itemData["MaterialCode"]);     
 
@@ -524,10 +524,10 @@
                     { "className": "dt-center", "width": "11%", "targets": 10 }, //LotDate
                     { "width": "12%", "targets": 11 },  //DetailRemark
                     { "className": "dt-right", "width": "4%", "targets": 12 },  //NoOfLabel
-                    { "className": "dt-center", "width": "6%", "targets": 13 }, //GenLabelStatus
+                    { "className": "dt-center", "width": "4%", "targets": 13 }, //GenLabelStatus
                     { "width": "0%", "targets": 14, "visible": false },  //CompanyCode
                     { "width": "0%", "targets": 15, "visible": false },  //RecordFlag
-                    { "width": "4%", "targets": 16 }    //Action
+                    { "width": "6%", "targets": 16 }    //Action
                 ],
                 scrollY: '350px',
                 scrollX: false,
@@ -879,7 +879,7 @@
 
     //------------------------- ItemRemark -------------------------------//
 
-
+    //Add Detail
     $('#tblArrivalDtl').on('click', '#btnAddDtl', function (event) {
 
         event.preventDefault();
@@ -897,8 +897,8 @@
                 Id: 0,
                 ArrivalId: 0,
                 LineNo: dtArrDtl.data().length + 1,
-                PoLineNo: 0,
-                MaterialId: -1,
+                PoLineNo: $('#hPoLine').val(), 
+                MaterialId: $('#ItemId').val(),
                 MaterialCode: $('#ItemCode').val(),
                 MaterialName: $('#ItemName').val(),
                 MaterialDesc: '',
@@ -923,6 +923,14 @@
 
             $('#ItemCode').focus();
         }
+    });
+
+    //Cancel Detail
+    $('#tblArrivalDtl').on('click', '#btnCancelDtl', function (event) {
+
+        event.preventDefault();
+
+        ClearPanelItemDetail();
     });
 
 
@@ -1260,13 +1268,11 @@ function addRequestVerificationToken(data) {
 function CreateNewArrivalDtlRow() {
 
     //LineNo (New)
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right">(new)</td>'));
-    //<span class="fa fa-asterisk" aria-hidden="true">
-
-
-
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right">(new)</td>'));  //<span class="fa fa-asterisk" aria-hidden="true">
+    
     //MaterialCode
     var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
+        '<input type="hidden" id="hPoLine" name="ItemId" value="">' +
         '<input type="hidden" id="ItemId" name="ItemId" value="">' +
         '<input class="form-control input-sm text-bold text-box single-line" id="ItemCode" name="ItemCode" type="text" data-toggle="tooltip" data-placement="bottom" title="This field is require!!" value="" autocomplete="off">' +
         '<span class="input-group-btn">' +
@@ -1313,17 +1319,18 @@ function CreateNewArrivalDtlRow() {
 
     //Button
     //var htmlButtonAdd = '<a id="btnAddDtl" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>';
-    var htmlButtonAdd = '<span class="input-group-btn">' +
-        '<button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Add Detail" id="btnAddDtl">' +
+    var htmlAction = '<span class="input-group">' +
+        '<button type="button" class="btn btn-default btn-sm btn-flat input-space" data-toggle="tooltip" title="Add Detail" id="btnAddDtl">' +
         '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>' +
+        '</button>&nbsp;' +
+        '<button type="button" class="btn btn-default btn-sm btn-flat input-space" data-toggle="tooltip" title="Cancel Detail" id="btnCancelDtl">' +
+        '<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>' +
         '</button>' +
         '</span>';
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlButtonAdd + '</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlAction + '</td>'));
 
 
     global.applyDatepicker($("#LotDate").prop("id"), true);
-
-
 
 }
 
@@ -1356,6 +1363,9 @@ function ValidationRecordDetail() {
 }
 
 function ClearPanelItemDetail() {
+
+    $('hPoLine').val('');
+    $('#ItemId').val('');
     $('#ItemCode').val('');
     $('#ItemName').val('');
     $('#ItemQty').val('');

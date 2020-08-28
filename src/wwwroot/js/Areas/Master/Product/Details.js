@@ -1,6 +1,5 @@
 ﻿$(function () {
 
-    
     /*-------------- BEGIN PRODUCTION TYPE --------------*/
     $('#ProductionType').inputpicker({
         url: $('#DetailsData').data('prodtype-get-url'),

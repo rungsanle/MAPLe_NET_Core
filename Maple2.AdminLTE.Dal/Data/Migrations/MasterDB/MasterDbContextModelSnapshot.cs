@@ -14,7 +14,7 @@ namespace Maple2.AdminLTE.Dal.Data.Migrations.MasterDB
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Maple2.AdminLTE.Bel.M_ArrivalType", b =>
@@ -457,7 +457,8 @@ namespace Maple2.AdminLTE.Dal.Data.Migrations.MasterDB
 
                     b.Property<int?>("MaterialTypeId");
 
-                    b.Property<decimal?>("PackageStdQty");
+                    b.Property<decimal?>("PackageStdQty")
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("ProductCode")
                         .IsRequired()
@@ -476,15 +477,20 @@ namespace Maple2.AdminLTE.Dal.Data.Migrations.MasterDB
 
                     b.Property<int?>("RevisionNo");
 
-                    b.Property<decimal?>("SalesPrice1");
+                    b.Property<decimal?>("SalesPrice1")
+                        .HasColumnType("decimal(18,4)");
 
-                    b.Property<decimal?>("SalesPrice2");
+                    b.Property<decimal?>("SalesPrice2")
+                        .HasColumnType("decimal(18,4)");
 
-                    b.Property<decimal?>("SalesPrice3");
+                    b.Property<decimal?>("SalesPrice3")
+                        .HasColumnType("decimal(18,4)");
 
-                    b.Property<decimal?>("SalesPrice4");
+                    b.Property<decimal?>("SalesPrice4")
+                        .HasColumnType("decimal(18,4)");
 
-                    b.Property<decimal?>("SalesPrice5");
+                    b.Property<decimal?>("SalesPrice5")
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<int?>("UnitId");
 
@@ -733,7 +739,7 @@ namespace Maple2.AdminLTE.Dal.Data.Migrations.MasterDB
 
                     b.HasIndex("VendorCode", "CompanyCode")
                         .IsUnique()
-                        .HasName("IX_CUSTANDCOMP");
+                        .HasName("IX_VENANDCOMP");
 
                     b.ToTable("m_vendor");
                 });

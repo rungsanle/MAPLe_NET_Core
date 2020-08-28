@@ -7,7 +7,7 @@ namespace Maple2.AdminLTE.Dal
 {
     public class MasterDbContext : DbContext
     {
-        public MasterDbContext(DbContextOptions options) : base(options)
+        public MasterDbContext(DbContextOptions<MasterDbContext> options) : base(options)
         {
         }
         //public MasterDbContext()
@@ -145,7 +145,7 @@ namespace Maple2.AdminLTE.Dal
             //Vendor more specifications.
             modelBuilder.Entity<M_Vendor>()
                 .HasIndex(v => new { v.VendorCode, v.CompanyCode })
-                .HasName("IX_CUSTANDCOMP")
+                .HasName("IX_VENANDCOMP")
                 .IsUnique(true);
         }
     }
