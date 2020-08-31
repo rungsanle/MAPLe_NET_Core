@@ -97,8 +97,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, prod, meta) {
-                            return '<a id="viewProduct" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Product/Details/' + prod.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editProduct" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Product/Edit/' + prod.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewProduct" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Product/Details/' + prod.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editProduct" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Product/Edit/' + prod.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delProduct" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Product/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }
