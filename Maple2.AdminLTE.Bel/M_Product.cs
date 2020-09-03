@@ -54,7 +54,7 @@ namespace Maple2.AdminLTE.Bel
         public string Unit { get; set; }
 
         [Display(Name = "Package")]
-        [DisplayFormat(DataFormatString = "{0:#,0.0000}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N4}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "decimal(18,4)")]
         public decimal? PackageStdQty { get; set; }
 

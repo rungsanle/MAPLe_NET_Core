@@ -479,7 +479,13 @@
                     //        return "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
                     //    }
                     //},
-                    { "data": "LotDate", "autoWidth": false },
+                    {
+                        "data": "LotDate", "autoWidth": false, "type": "date-eu", "render": function (value) {
+
+                            return global.localDate(value);
+                            
+                        }
+                    },
                     //{
                     //    "data": "LotDate", "autoWidth": false, "type": "date",
                     //    "render": function (value) {
@@ -538,10 +544,10 @@
                 order: [],
                 ordering: false,
                 info: true,
-                language: {
-                    info: "Total _TOTAL_ records",
-                    infoEmpty: ""
-                },
+                //language: {
+                //    info: "Total _TOTAL_ records",
+                //    infoEmpty: ""
+                //},
                 lengthChange: false,
                 responsive: true
                 /*,
@@ -658,7 +664,6 @@
 
     setTimeout(function () {
         dtArrDtl.columns.adjust().draw();
-
         CreateNewArrivalDtlRow();
     }, 200);
 
@@ -905,7 +910,7 @@
                 OrderQty: $('#ItemQty').val(),
                 RecvQty: 0,
                 LotNo: $('#LotNo').val(),
-                LotDate: global.localDate($("#LotDate").val()),
+                LotDate: global.localDate($("#LotDate").val()),    //$("#LotDate").val(),                //global.localDate($("#LotDate").val()),
                 DetailRemark: $('#ItemRemark').val(),
                 NoOfLabel: 0,
                 GenLabelStatus: 'N',
@@ -1331,6 +1336,10 @@ function CreateNewArrivalDtlRow() {
 
 
     global.applyDatepicker($("#LotDate").prop("id"), true);
+
+    var numRows = dtArrDtl.rows().count();
+
+    $("#lblArrDtlRecords").text("Total " + numRows + " Records");
 
 }
 

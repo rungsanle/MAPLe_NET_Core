@@ -146,3 +146,7 @@
     $('#imageProduct').attr("src", imgSrc);
 
 });
+
+function userDataDependent(userObj) {
+    alert(userObj);
+}
