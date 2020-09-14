@@ -25,6 +25,7 @@ namespace Maple2.AdminLTE.Bel
         [Display(Name = "Raw MAT. Type")]
         public string RawMatTypeName { get; set; }
 
+
         public int? VendorId { get; set; }
 
         [NotMapped]

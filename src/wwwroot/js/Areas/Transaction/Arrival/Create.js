@@ -185,6 +185,9 @@
 
         $('#VendorId').val(vendorData["Id"]);
         $('#VendorCode').val(vendorData["VendorCode"]);
+
+        global.removeValidationErrors('VendorCode');
+
         $('#VendorName').val(vendorData["VendorName"]);
 
         var address = (vendorData["AddressL1"] === null ? '' : vendorData["AddressL1"] + " ");
@@ -665,7 +668,7 @@
     setTimeout(function () {
         dtArrDtl.columns.adjust().draw();
         CreateNewArrivalDtlRow();
-    }, 200);
+    }, 300);
 
 
     //------------------------- ItemCode -------------------------------//
@@ -1124,6 +1127,29 @@
 
         event.preventDefault();
 
+        var rt = $("#RawMatTypeName").val();
+        if (rt == "") {
+            $("span[data-valmsg-for='RawMatTypeName']").append('<li>This field is required!!</li>');
+            $("#RawMatTypeName").focus();
+            return;
+        }
+
+        //Vendor Code is Required
+        var vc = $("#VendorCode").val();
+        if (vc == "") {
+            $("span[data-valmsg-for='VendorCode']").append('<li>This field is required!!</li>');
+            $("#VendorCode").focus();
+            return;
+        }
+
+        //Vendor ID is Require
+        var vi = $("#VendorId").val();
+        if (vi == "") {
+            $("span[data-valmsg-for='VendorCode']").append('<li>This field is required!!</li>');
+            $("#VendorCode").focus().select();
+            return;
+        }
+
         //var valueValConvertToDate = new Date($("#ArrivalDate").val());
 
         //console.log(valueValConvertToDate);
@@ -1148,13 +1174,13 @@
 
         //    return result;
         //}
-        console.log($("#ArrivalDate").val());
+        //console.log($("#ArrivalDate").val());
 
-        console.log(global.localDate($("#ArrivalDate").val()));
+        //console.log(global.localDate($("#ArrivalDate").val()));
 
         //var useDate = moment($("#ArrivalDate").val(), "DD-MM-YYYY").format("DD-MM-YYYY");
 
-        //console.log(useDate);
+        console.log($("#ArrivalDate").val());
 
         //alert(useDate);
 
@@ -1164,13 +1190,13 @@
             url: $('#CreateData').data('arrival-add-url'),
             data: addRequestVerificationToken({
                 ArrivalNo: $("#ArrivalNo").val().toUpperCase(),
-                ArrivalDate: global.localDate($("#ArrivalDate").val()),
+                ArrivalDate: global.localDate($("#ArrivalDate").val()),    //global.localDate($("#ArrivalDate").val())
                 ArrivalTypeId: $("#ArrivalTypeName").val(),
                 RawMatTypeId: $("#RawMatTypeName").val(),
                 VendorId: $("#VendorId").val().toUpperCase(),
                 PurchaseOrderNo: $("#PurchaseOrderNo").val(),
                 DocRefNo: $("#DocRefNo").val().toUpperCase(),
-                DocRefDate: global.localDate($("#DocRefDate").val()),
+                DocRefDate: global.localDate($("#DocRefDate").val()),   //global.localDate($("#DocRefDate").val())
                 ArrivalRemark: $("#ArrivalRemark").val(),
                 CompanyCode: $("#CompanyCode").val(),
                 Is_Active: $("#Is_Active").is(':checked'),
@@ -1186,7 +1212,12 @@
                     $('#newArrivalContainer').html("");
 
                     $("#tblArrival").DataTable().ajax.reload(null, false);
-                    $("#tblArrival").DataTable().page('last').draw('page');
+                    //$("#tblArrival").DataTable().page('first').draw('page');
+                    setTimeout(function () {
+                        if ($("#tblArrival").DataTable().page.info().page != 0) {
+                            $("#tblArrival").DataTable().page('first').draw('page');
+                        }
+                    }, 300);
 
                     toastr.success(response.message, 'Create Arrival', { timeOut: appSetting.toastrSuccessTimeout, extendedTimeOut: appSetting.toastrExtenTimeout });
 
@@ -1414,6 +1445,8 @@ function GetArrivalItemDetails(arrDetails) {
     //var arrDetails = new Array();
     var jsonData = JSON.parse(JSON.stringify($('#tblArrivalDtl').dataTable().fnGetData()));
 
+
+
     for (var obj in jsonData) {
 
         if (jsonData.hasOwnProperty(obj)) {
@@ -1431,7 +1464,7 @@ function GetArrivalItemDetails(arrDetails) {
             arrDtl.OrderQty = jsonData[obj]["OrderQty"];
             arrDtl.RecvQty = jsonData[obj]["RecvQty"];
             arrDtl.LotNo = jsonData[obj]["LotNo"];
-            arrDtl.LotDate = global.localDate(jsonData[obj]["LotDate"]);   //jsonData[obj]["LotDate"];
+            arrDtl.LotDate = global.localDate(jsonData[obj]["LotDate"]);   //global.localDate(jsonData[obj]["LotDate"]);
             arrDtl.DetailRemark = jsonData[obj]["DetailRemark"];
             arrDtl.GenLabelStatus = jsonData[obj]["GenLabelStatus"];
             arrDtl.NoOfLabel = jsonData[obj]["NoOfLabel"];
@@ -1445,6 +1478,9 @@ function GetArrivalItemDetails(arrDetails) {
 
     return arrDetails;
 }
+
+
+
 
 //function showDatepicker(obj) {
 //    alert(obj);

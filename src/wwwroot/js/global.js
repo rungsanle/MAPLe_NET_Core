@@ -95,12 +95,14 @@ global.convertJsonDate = function (vDate, optFormat = 'DD-MM-YYYY') {
 
 }
 
-global.localDate = function (locDate, optFormat = 'DD-MM-YYYY') {
+
+global.localDate = function (locDate, optFormat = 'DD-MM-YYYY') {  
 
     //if (locDate == null) return null;
     if (typeof locDate != 'undefined' && locDate) {
 
         if (locDate instanceof Date) {
+            console.log('instance of Date:' + locDate);
             return locDate
         };
 
@@ -109,9 +111,11 @@ global.localDate = function (locDate, optFormat = 'DD-MM-YYYY') {
         //.locale('en')
 
         if (!resultDate.isValid()) {
+            console.log('Date not valid:' + resultDate);
             resultDate = moment(locDate, optFormat);   //moment(locDate, optFormat).locale('en');
         }
 
+        console.log('Result Date :' + resultDate);
         return resultDate.format(optFormat);    //resultDate.locale('en').format(optFormat); 
 
     } else {

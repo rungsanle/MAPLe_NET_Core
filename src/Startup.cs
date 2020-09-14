@@ -42,6 +42,12 @@ namespace Maple2.AdminLTE.Uil
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var cultureInfo = new CultureInfo("en-US");
+            cultureInfo.DateTimeFormat.ShortDatePattern = Configuration["AppSettings:ShortDatePattern"];
+
+            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.

@@ -18,6 +18,7 @@ namespace Maple2.AdminLTE.Uil.Pages
         }
         public void OnGet()
         {
+            ViewData["ShortDateFormat"] = _configuration["AppSettings:ShortDateFormat"];
             ViewData["DefaultFirstPage"] = _configuration["AppSettings:DefaultFirstPage"];
             ViewData["TableDisplayLength"] = _configuration["AppSettings:TableDisplayLength"];
             ViewData["ToastrSuccessTimeout"] = _configuration["AppSettings:ToastrSuccessTimeout"];
