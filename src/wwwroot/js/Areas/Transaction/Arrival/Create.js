@@ -5,6 +5,20 @@
 
     //$('input').attr('autocomplete', 'off');
 
+    //Begin----check clear require---//
+    $("#RawMatTypeName").on("change", function () {
+        if ($("#RawMatTypeName").val() != '') {
+            global.removeValidationErrors('RawMatTypeName');
+        }
+    });
+
+    $("#VendorCode").on("focusout", function () {
+        if ($("#VendorCode").val() != '') {
+            global.removeValidationErrors('VendorCode');
+        }
+    });
+    //End----check clear require---//
+
     var arrRemoveDetails = new Array();
 
     $("#ArrivalNo").val('(AUTO)');
@@ -1126,6 +1140,8 @@
     $("#btnSaveCreate").on("click", function (event) {
 
         event.preventDefault();
+
+        global.resetValidationErrors();
 
         var rt = $("#RawMatTypeName").val();
         if (rt == "") {
