@@ -91,8 +91,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, location, meta) {
-                            return '<a id="viewLocation" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Location/Details/' + location.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editLocation" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Location/Edit/' + location.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewLocation" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Location/Details/' + location.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editLocation" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Location/Edit/' + location.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delLocation" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Location/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

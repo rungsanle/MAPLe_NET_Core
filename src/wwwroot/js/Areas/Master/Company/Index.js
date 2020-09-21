@@ -92,8 +92,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, comp, meta) {
-                            return '<a id="viewComp" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Company/Details/' + comp.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editComp" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Company/Edit/' + comp.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewComp" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Company/Details/' + comp.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editComp" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Company/Edit/' + comp.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delComp" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Company/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

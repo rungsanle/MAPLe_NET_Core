@@ -89,8 +89,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, matType, meta) {
-                            return '<a id="viewMatType" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="MaterialType/Details/' + matType.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editMatType" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="MaterialType/Edit/' + matType.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewMatType" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="MaterialType/Details/' + matType.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editMatType" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="MaterialType/Edit/' + matType.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delMatType" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="MaterialType/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

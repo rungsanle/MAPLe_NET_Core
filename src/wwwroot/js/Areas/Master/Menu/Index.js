@@ -125,8 +125,8 @@ $(function () {
                     {
                         "autoWidth": true,
                         "render": function (data, type, menu, meta) {
-                            return '<a id="viewMenu" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Menu/Details/' + menu.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editMenu" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Menu/Edit/' + menu.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewMenu" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Menu/Details/' + menu.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editMenu" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Menu/Edit/' + menu.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delMenu" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Menu/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

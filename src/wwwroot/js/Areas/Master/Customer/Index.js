@@ -92,8 +92,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, cust, meta) {
-                            return '<a id="viewCust" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Customer/Details/' + cust.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editCust" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Customer/Edit/' + cust.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewCust" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Customer/Details/' + cust.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editCust" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Customer/Edit/' + cust.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delCust" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Customer/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

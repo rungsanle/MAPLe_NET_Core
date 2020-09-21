@@ -92,8 +92,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, vend, meta) {
-                            return '<a id="viewVend" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Vendor/Details/' + vend.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                   '<a id="editVend" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Vendor/Edit/' + vend.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewVend" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Vendor/Details/' + vend.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                   '<a id="editVend" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Vendor/Edit/' + vend.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                    '<a id="delVend" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Vendor/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

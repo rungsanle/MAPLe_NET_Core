@@ -89,8 +89,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, arrType, meta) {
-                            return '<a id="viewArrivalType" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="ArrivalType/Details/' + arrType.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editArrivalType" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="ArrivalType/Edit/' + arrType.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewArrivalType" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="ArrivalType/Details/' + arrType.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editArrivalType" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="ArrivalType/Edit/' + arrType.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delArrivalType" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="ArrivalType/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

@@ -90,8 +90,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, process, meta) {
-                            return '<a id="viewProcess" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Process/Details/' + process.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editProcess" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Process/Edit/' + process.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewProcess" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Process/Details/' + process.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editProcess" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Process/Edit/' + process.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delProcess" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Process/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

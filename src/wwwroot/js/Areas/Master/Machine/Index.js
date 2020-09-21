@@ -92,8 +92,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, mc, meta) {
-                            return '<a id="viewMachine" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Machine/Details/' + mc.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editMachine" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Machine/Edit/' + mc.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewMachine" class="btn btn-view btn-sm" data-toggle="tooltip" title="View" href="Machine/Details/' + mc.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editMachine" class="btn btn-edit btn-sm" data-toggle="tooltip" title="Edit" href="Machine/Edit/' + mc.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delMachine" class="btn btn-delete btn-sm" data-toggle="tooltip" title="Remove" href="Machine/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

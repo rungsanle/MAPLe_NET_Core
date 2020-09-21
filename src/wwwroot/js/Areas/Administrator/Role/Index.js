@@ -72,8 +72,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, role, meta) {
-                            return '<a id="viewRole" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="Role/Details/' + role.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editRole" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="Role/Edit/' + role.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewRole" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="Role/Details/' + role.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editRole" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="Role/Edit/' + role.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delRole" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove" href="Role/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

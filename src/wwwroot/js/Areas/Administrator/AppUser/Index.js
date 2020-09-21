@@ -72,8 +72,8 @@
                     {
                         "autoWidth": true,
                         "render": function (data, type, appu, meta) {
-                            return '<a id="viewAppUser" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="AppUser/Details/' + appu.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editAppUser" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="AppUser/Edit/' + appu.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewAppUser" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="AppUser/Details/' + appu.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editAppUser" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="AppUser/Edit/' + appu.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delAppUser" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove" href="AppUser/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }

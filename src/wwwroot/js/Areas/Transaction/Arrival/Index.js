@@ -139,8 +139,8 @@
                     },
                     {
                         "render": function (data, type, arr, meta) {
-                            return '<a id="viewArrival" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="Arrival/Details/' + arr.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>&nbsp;' +
-                                '<a id="editArrival" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="Arrival/Edit/' + arr.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;' +
+                            return '<a id="viewArrival" class="btn btn-default btn-sm" data-toggle="tooltip" title="View" href="Arrival/Details/' + arr.Id + '"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>' +
+                                '<a id="editArrival" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit" href="Arrival/Edit/' + arr.Id + '"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>' +
                                 '<a id="delArrival" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove" href="Arrival/Delete/"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
                         }
                     }
