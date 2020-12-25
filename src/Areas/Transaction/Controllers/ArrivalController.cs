@@ -186,6 +186,7 @@ namespace Maple2.AdminLTE.Uil.Areas.Transaction.Controllers
         {
             ViewBag.CompCode = await base.CurrentUserComp();
             return await Task.Run(() => View());
+            //return await Task.Run(() => View("CreateNew"));
         }
 
         [HttpPost]

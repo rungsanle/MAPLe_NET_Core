@@ -93,7 +93,7 @@ table.dataTable thead > tr > th {
     text-align: center;
     vertical-align: middle;
     /*background-color: lightskyblue;*/
-    font-size: 13px;
+    font-size: 12px;
     font-family: sans-serif;
     /*border: 0.01em solid #dddddd !important;*/
     /*border: 0.05em solid #dfdfdf !important;
@@ -123,13 +123,14 @@ word-break: break-all;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
     font-size: small;
     /*border: 0.01em solid #dddddd !important;*/
     /*border: 0.01em solid #dfdfdf !important;
     border-color: #dfdfdf;*/
     border-width: 1px !important;
     border-color: #e7e7e7 !important;
-    padding: 5px;
+    padding: 3px;
     height: 25px;
 }
 
@@ -159,6 +160,7 @@ td.dt-bold-center {
 
 td.dt-right {
     text-align: right;
+    vertical-align: middle;
 }
 
 td.dt-bold-right {

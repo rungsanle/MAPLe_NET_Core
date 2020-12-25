@@ -1320,7 +1320,7 @@ function addRequestVerificationToken(data) {
 function CreateNewArrivalDtlRow() {
 
     //LineNo (New)
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class=" dt-right">(new)</td>'));  //<span class="fa fa-asterisk" aria-hidden="true">
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right" style="vertical-align: middle;">(new)</td>'));  //<span class="fa fa-asterisk" aria-hidden="true">
     
     //MaterialCode
     var htmlMaterialCode = '<div class="input-group" style="width:100%">' +
@@ -1344,7 +1344,7 @@ function CreateNewArrivalDtlRow() {
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-bold-right">' + htmlOrderQty + '</td>'));
 
     //RecvQty
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right">0</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right" style="vertical-align: middle;">0</td>'));
 
     //LotNo
     var htmlLotNo = "<input class='form-control input-sm text-box single-line' style='width:100%' id='LotNo' name='LotNo' type='text' value=''>";
@@ -1364,10 +1364,10 @@ function CreateNewArrivalDtlRow() {
     $('#tblArrivalDtl tfoot tr:first-child').append($('<td>' + htmlDetailRemark + '</td>'));
 
     //Label 
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right">0</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-right" style="vertical-align: middle;">0</td>'));
 
     //Status
-    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-center">G</td>'));
+    $('#tblArrivalDtl tfoot tr:first-child').append($('<td class="dt-center" style="vertical-align: middle;">G</td>'));
 
     //Button
     //var htmlButtonAdd = '<a id="btnAddDtl" class="btn btn-default btn-sm" data-toggle="tooltip" title="Remove"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>';

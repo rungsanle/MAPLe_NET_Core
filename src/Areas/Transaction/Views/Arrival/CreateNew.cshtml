@@ -1,0 +1,370 @@
+﻿@model Maple2.AdminLTE.Bel.T_Arrival_Header
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Buttons -->
+    <link rel="stylesheet/scss" type="text/css" href="~/bower_components/datatables-buttons/css/buttons.dataTables.scss">
+    <link rel="stylesheet" href="~/plugins/Buttons-1.6.1/css/buttons.dataTables.min.css">
+    <!-- Input Picker -->
+    <link rel="stylesheet" href="~/plugins/Input-picker/jquery.inputpicker.css">
+
+    <style>
+        label.control-label {
+            padding: 15px 0px 0px 3px !important;
+        }
+
+        div.form-group {
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+            margin-bottom: 0px !important;
+        }
+
+        div.space-height {
+            height: 10px;
+        }
+
+        .dataTables_scrollBody {
+            height: 350px;
+            overflow-y: scroll !important;
+        }
+
+        /* For Firefox */
+        input[type='number'] {
+            -moz-appearance: textfield;
+        }
+
+        /* Webkit browsers like Safari and Chrome */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .dataTables_info {
+            display: none;
+        }
+
+        .dataTables_empty {
+            display: none;
+        }
+    </style>
+}
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <!-- DataTables -->
+    <script src="~/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- Buttons -->
+    <script src="~/plugins/Buttons-1.6.1/js/dataTables.buttons.min.js"></script>
+    <script src="~/bower_components/datatables-buttons/js/dataTables.buttons.js"></script>
+    <script src="~/bower_components/datatables-buttons/js/buttons.html5.js"></script>
+    <script src="~/bower_components/datatables-buttons/js/buttons.flash.js"></script>
+    <script src="~/bower_components/datatables-buttons/js/buttons.print.js"></script>
+    <script src="~/bower_components/jszip/dist/jszip.min.js"></script>
+    <!-- Bootstrap-Switch -->
+    <script src="~/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <!-- Input Picker -->
+    <script src="~/plugins/Input-picker/jquery.inputpicker.js"></script>*@
+    <!-- page script -->
+    <script src="~/js/Areas/Transaction/Arrival/Create.js"></script>
+
+}
+
+<div id="CreateData"
+     data-arrival-add-url="@Url.Action("Create", "Arrival", new { Area = "Transaction" })"
+     data-arrdtl-get-url="@Url.Action("GetArrivalDetail", "Arrival", new { Area = "Transaction" })"
+     data-arrtype-get-url="@Url.Action("GetArrivalType", "ArrivalType", new { Area = "Master" })"
+     data-rawmattype-get-url="@Url.Action("GetRawMaterialType", "RawMaterialType", new { Area = "Master" })"
+     data-vend-get-url="@Url.Action("GetVendor", "Arrival", new { Area = "Transaction" })"
+     data-mat-get-url="@Url.Action("GetMaterial", "Arrival", new { Area = "Transaction" })"
+     data-viewbag-compcode="@ViewBag.CompCode">
+</div>
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Arrival Create
+        <small>Transaction</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Transaction</a></li>
+        <li class="active">Arrival Create</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="form-group row">
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="ArrivalNo" class="control-label input-sm"></label>
+                                    <div class="input-group">
+                                        <input asp-for="ArrivalNo" class="form-control input-sm text-code" readonly="readonly" />
+                                        <div class="input-group-addon">
+                                            <i class="fa  fa-file-o"></i>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="ArrivalNo" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="ArrivalDate" class="control-label input-sm"></label>
+                                    <div class="input-group date">
+                                        <input asp-for="ArrivalDate" class="datepicker form-control input-sm" type="datetime" />
+                                        <span class="input-group-addon" onclick="global.showDatepicker('ArrivalDate');">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                    <span asp-validation-for="ArrivalDate" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="ArrivalTypeName" class="control-label input-sm"></label>
+                                    <input asp-for="ArrivalTypeId" type="hidden" />
+                                    <input asp-for="ArrivalTypeName" class="form-control input-sm" style="width:200px;" placeholder="-- Please Select --" />
+                                    <span asp-validation-for="ArrivalTypeName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="RawMatTypeName" class="control-label input-sm"></label>
+                                    <input asp-for="RawMatTypeId" type="hidden" />
+                                    <input asp-for="RawMatTypeName" class="form-control input-sm" style="width:200px;" placeholder="-- Please Select --" />
+                                    <span asp-validation-for="RawMatTypeName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label asp-for="ArrivalRemark" class="control-label input-sm"></label>
+                                    <textarea asp-for="ArrivalRemark" class="form-control input-sm"></textarea>
+                                    <span asp-validation-for="ArrivalRemark" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="VendorCode" class="control-label input-sm"></label>
+                                    <input asp-for="VendorId" type="hidden" />
+                                    <div class="input-group">
+                                        <input asp-for="VendorCode" class="form-control input-sm text-code" autocomplete="off" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-browse btn-sm btn-flat" data-toggle="modal" id="btnSearchVendor">
+                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                    <span asp-validation-for="VendorCode" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label asp-for="VendorName" class="control-label input-sm"></label>
+                                    <input asp-for="VendorName" class="form-control input-sm col-sm-4" readonly="readonly" tabindex="-1" onfocus="this.blur();" />
+                                    <span asp-validation-for="VendorName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="PurchaseOrderNo" class="control-label input-sm"></label>
+                                    <div class="input-group">
+                                        <input asp-for="PurchaseOrderNo" class="form-control input-sm text-bold" autocomplete="off" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" title="Search PO" id="btnSearchPO">
+                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                    <span asp-validation-for="PurchaseOrderNo" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="DocRefNo" class="control-label input-sm"></label>
+                                    <div class="input-group">
+                                        <input asp-for="DocRefNo" class="form-control input-sm text-upper" autocomplete="off" />
+                                        <div class="input-group-addon">
+                                            <i class="fa  fa-file-o"></i>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="DocRefNo" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="DocRefDate" class="control-label input-sm"></label>
+                                    <div class="input-group date">
+                                        <input asp-for="DocRefDate" class="form-control input-sm" type="text" />
+                                        <span class="input-group-addon" onclick="global.showDatepicker('DocRefDate');">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                    <span asp-validation-for="DocRefDate" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="form-group col-sm-2">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <div class="space-height"></div>
+                                    <input asp-for="VendorAddress" class="form-control input-sm col-sm-4" readonly="readonly" tabindex="-1" onfocus="this.blur();" />
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <div class="space-height"></div>
+                                    <button type="button" id="btnGenPO" class="btn btn-default btn-sm"><span class="fa fa-indent" aria-hidden="true"></span>&nbsp;Generate Detail</button>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="CompanyCode" class="control-label input-sm"></label>
+                                    <input asp-for="CompanyCode" class="form-control input-sm text-bold" style="width:200px;" placeholder="-- Please Select --" />
+                                    <span asp-validation-for="CompanyCode" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label asp-for="Is_Active" class="control-label input-sm"></label>
+                                    <div class="checkbox2">
+                                        <label>
+                                            <input asp-for="Is_Active" />
+                                        </label>
+                                    </div>
+                                    <span asp-validation-for="Is_Active" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+            <div class="box">
+
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+
+                    <table id="tblArrivalDtl" class="table table-striped table-bordered table-hover table-sm">
+                        @*display compact*@
+                        <thead>
+                            <tr>
+                                <th>ArrivalId</th>
+                                <th>#</th>
+                                <th>PoLineNo</th>
+                                <th>MaterialId</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Qty</th>
+                                <th>Recv.</th>
+                                <th>Lot #</th>
+                                <th>Lot Date</th>
+                                <th>Remark</th>
+                                <th>Label</th>
+                                <th>Status</th>
+                                <th>Company</th>
+                                <th>RecordFlag</th>
+                                <th>AC</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot style="">
+                            <tr></tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+                <!-- /.box-body -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="control-label input-sm" id="lblArrDtlRecords">Total 0 Records</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" id="btnSaveCreate" class="btn btn-default btn-sm"><span class="fa fa-save" aria-hidden="true"></span>&nbsp;Save</button>
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+<!-- Begin Search Vendor -->
+<div class="modal fade" id="searchVendorModal" tabindex="-1" role="dialog" aria-labelledby="SearchVendorModal" aria-hidden="true" data-backdrop="static">
+    <div id="searchVendorContainer">
+        <div class="modal-dialog" style="width:1000px;">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" id="btnCloseVendorModel">&times;</button>
+                    <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i> SELECT VENDOR </h4>
+                </div>
+
+                <div class="box-body pad">
+                    <div class="table-responsive">
+                        <table id="tblVendor" class="table table-striped table-bordered table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Address L1</th>
+                                    <th>Address L2</th>
+                                    <th>Address L3</th>
+                                    <th>Address L4</th>
+                                    <th>Contact</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" id="btnCancelVendorModel"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search Vendor -->
+<!-- Begin Search Material -->
+<div class="modal fade" id="searchMaterialModal" tabindex="-1" role="dialog" aria-labelledby="SearchMaterialModal" aria-hidden="true" data-backdrop="static">
+    <div id="searchMaterialContainer">
+        <div class="modal-dialog" style="width:950px;">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" id="btnCloseMaterialModel">&times;</button>
+                    <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i> Select Material </h4>
+                </div>
+
+                <div class="box-body pad">
+                    <div class="table-responsive">
+                        <table id="tblMaterial" class="table table-striped table-bordered table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Package</th>
+                                    <th>Unit</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" id="btnCancelMaterialModel"><span class="fa fa-rotate-left" aria-hidden="true"></span>&nbsp;Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search Material -->
